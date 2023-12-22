@@ -1,9 +1,17 @@
 22.12.2023
 Vector Mounting Brackets for Rodney Metal
 
-Length		180mm
+Length		188mm
 Mount Frame:	M4
 Vector:		125mm
-Mount A:	M2
-Mount B:	M1
-Offset:		5mm
+Mount A:	M2.6
+Offset:		11.5mm
+Mount B:	M1.5
+Offset:		11.5mm
+Offset-Y:	5mm
+Offset-X:	108mm
+
+Objects
+* 2x Bar-left: 188x20x2.5
+* 2x Bar-right: 188x20x2.5
+
