@@ -6,4 +6,4 @@ Mount Frame:	M4
 Vector:		125mm
 Mount A:	M2
 Mount B:	M1
-Of
+Offset:		5mm
