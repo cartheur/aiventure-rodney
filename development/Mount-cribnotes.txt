@@ -12,6 +12,10 @@ Offset-Y:	5mm
 Offset-X:	108mm
 
 Objects
-* 2x Bar-left: 188x20x2.5
+* 2x Bar-left: 195x22x2.5
 * 2x Bar-right: 188x20x2.5
 
+Final render is:
+
+* 3-vector-support-rt
+* 4-vector-support-lt
