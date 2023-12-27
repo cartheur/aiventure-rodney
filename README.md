@@ -10,3 +10,7 @@ The book, written in 1978, leverages an Intel 8085 8-bit (the very last CPU made
 The challenge of this project is to make a build of the microcomputer system to examine the merit of the "self-programming" claim. On tiis rests *everything* claimed 'A.I.'. This is a total misnomer. I will be making videos to this effect.
 
 Added the late Ulrich Bangart's *EZGPIB* program - versions `1` and `2` to aid with a HPIB-interfaced instrument providing data streams to an analytic program.
+
+### Progress
+
+The foundations in metal have been constructed and starting the design phase.
