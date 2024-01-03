@@ -9,12 +9,12 @@ This is the precursor to MS-DOS and is likely the oldest known version to surviv
 
 ### Quick Start Guide to running 86-DOS on SIMH/AltairZ80
 
-0. Unzip all files from the archive into a directory on your PC.
-1. Then run the AltairZ80 simulator using the scp86mon startup script. This can be found [here](http://cpmarchives.classiccmp.org/cpm/mirrors/www.schorn.ch/cpm/intro.php). PC, Linux and source are in [this](/software/SIMH/) folder.
-2. Press <return> a few times to get the SCP 8086 Monitor '>' prompt.
-3. Type 'B' at the monitor prompt (uppercase) to boot 86-DOS.
-4. Enter a date, note that 86-DOS is not Y2K compliant, and will reject recent dates.
-5. 86-DOS Manuals are available from: http://www.patersontech.com/dos/manuals.aspx (dead link, no archive)
+* Unzip all files from the archive into a directory on your PC.
+* Then run the AltairZ80 simulator using the scp86mon startup script. This can be found [here](http://cpmarchives.classiccmp.org/cpm/mirrors/www.schorn.ch/cpm/intro.php). PC, Linux and source are in [this](/software/SIMH/) folder.
+* Press <return> a few times to get the SCP 8086 Monitor '>' prompt.
+* Type 'B' at the monitor prompt (uppercase) to boot 86-DOS.
+* Enter a date, note that 86-DOS is not Y2K compliant, and will reject recent dates.
+* 86-DOS Manuals are available from: http://www.patersontech.com/dos/manuals.aspx (dead link, no archive)
 
 ```
 =====================================================
