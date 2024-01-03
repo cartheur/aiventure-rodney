@@ -1,4 +1,4 @@
-## Random early Intel software
+## Software on the cusp of 8-bit
 
 * 86-DOS Version 0.1-C
 
