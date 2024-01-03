@@ -1,5 +1,6 @@
 # aiventure-rodney
-A project to revitalize and learn by Heiserman's 1979 robotics DIY. The robotics part is not the point of interest, rather, how to build an i8085 computer _from scratch_.
+
+A project to revitalize and learn by Heiserman's 1979 robotics DIY. The robotics part is not the point of interest, rather, how to build an i8085 computer _from scratch_. To explore Heiserman's self-learning aspect, a game will need to be devised for the computer to play.
 
 ## What is in here?
 
