@@ -13,3 +13,7 @@ Also here is the earliest 86-DOS version to be [published](/software/ReadMe.md).
 ### Progress
 
 The foundations in metal have been constructed and starting the design phase.
+
+Have the UI indicator light pattern thusly:
+
+![pattern](/images/indicating-pattern.jpg)
