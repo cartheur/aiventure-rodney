@@ -14,6 +14,10 @@ Also here is the earliest 86-DOS version to be [published](/software/ReadMe.md).
 
 The foundations in metal have been constructed and starting the design phase.
 
+Have the UI indicator light pattern thusly:
+
+![pattern](/images/indicating-pattern.jpg)
+
 ### The rise of 8-bit AI
 
 AI image generators are very popular these days, and the results are used in all sorts of creative projects. This made me wonder what it would have been like if image generators had existed during the early personal computer revolution in the 1980s. What would they have been like, and what would the images have been used for?
