@@ -18,6 +18,14 @@ Have the UI indicator light pattern thusly:
 
 ![pattern](/images/indicating-pattern.jpg)
 
+### Making things easier
+
+As wirewrapping is _always_ the mirror-inverse, an old technique is the _wrap id_:
+
+![image](/models/wrap-id-18-relative.png)
+
+As stock is hard-to-find, will create a 3D-printed model.
+
 ### The rise of 8-bit AI
 
 AI image generators are very popular these days, and the results are used in all sorts of creative projects. This made me wonder what it would have been like if image generators had existed during the early personal computer revolution in the 1980s. What would they have been like, and what would the images have been used for?
