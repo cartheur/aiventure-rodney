@@ -24,7 +24,9 @@ As wirewrapping is _always_ the mirror-inverse, an old technique is the _wrap id
 
 ![image](/models/wrap-id-18-relative.png)
 
-As stock is hard-to-find, will create a 3D-printed model.
+As stock is hard-to-find, will create a 3D-printed model. As a datasheet is rather untenable, a datasheet from the wirewrap sockets is a good measure.
+
+![image](/models/ww-sockets.jpg)
 
 ### The rise of 8-bit AI
 
