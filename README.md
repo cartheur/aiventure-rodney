@@ -1,6 +1,6 @@
 # aiventure-rodney
 
-A project revolving around Heiserman's 1979 robotics proposition. The focus is _scratch-building_ an i8085 computer. To explore self-learning programs, a game will need to be devised for the computer to play. They say this is _a dangerous practice_ having a comptuer self-generate code - with the notion that it programs - but if we do not start seriously exploring in slower formats (slow that our brains can recognize *good* from *bad*), then we we stay stuck. And maybe that is the prevailing wisdom anyway - but when have I ever done what I was told?
+A project revolving around Heiserman's 1979 robotics proposition. The focus is _scratch-building_ an i8085 computer. To explore self-learning programs, a game will need to be devised for the computer to play. They say this is _a dangerous practice_ having a comptuer self-generate code - with the notion that it programs - but if we do not start seriously exploring in slower formats (slow that our brains can recognize *good* from *bad*), then we we stay stuck.
 
 ## What is in here?
 
