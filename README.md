@@ -41,3 +41,13 @@ This produces a number of parameter values (a mean matrix, covariance matrix, et
 The number of iterations the algorithm goes through can be varied. More iterations produces better results generally, but takes longer. At 94 iterations, it takes about 20 minutes to run on a C64. Not really too bad considering how long a modern image generator would take on a modern computer without a GPU.
 
 From [here](https://hackaday.io/project/195819-commodore-64-ai-image-generator).
+
+### Taking a walk on the wild-side
+
+As it is necessary to explore the algorithm of [ideal](https://github.com/cartheur/ideal), we are stretching into unknown realms. How do we document this unexpected journey?
+
+* An alternative to the Von Neumann architecture is the [initiative](/literature/s41565-020-0738-x.pdf).
+* A combination of hardware and software [implementation](https://en.wikipedia.org/wiki/In-memory_processing).
+* What are some forward-looking paths, considering the initiatives, without going into the nanoscale esoteric?
+* SRAM and DRAM are perfectly capable of performing in-memory logic operations while NAND Flash memory is fit for matrix–vector multiplication operations.
+* In the context of the application-specific approach to computation, memory-based computational primitives can be used in a variety of tasks ranging from high-precision scientific computing to largely imprecise stochastic computing and everything in-between including deep learning in artificial neural networks (ANNs). 
