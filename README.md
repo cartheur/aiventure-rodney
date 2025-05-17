@@ -2,6 +2,8 @@
 
 A project revolving around Heiserman's 1979 robotics proposition. The focus is _scratch-building_ an i8085 computer. To explore self-learning programs, a game will need to be devised for the computer to play. They say this is _a dangerous practice_ having a comptuer self-generate code - with the notion that it programs - but if we do not start seriously exploring in slower formats (slow that our brains can recognize *good* from *bad*), then we we stay stuck.
 
+Given the time spent with _Ideal_, games will get one just so far; an effort begins today where we emplant Rodney onto a wheeled platform. Once there, we will backpropagate different kinds of dangerous things.
+
 ## What is in here?
 
 This repository contains a revitialization of the idea of a self-programming robot coupled with the ambition to learn the deepest aspects of how a computer functions at its most basic level. The book, written in 1978, leverages an Intel 8085 8-bit (the very last CPU made to this specification) where the reader builds up the system from scratch including the logic, buffers, and memory systems. Additionally, a tape-drive storage interface is described. Not just an historical curiousity, Rodney continues to teach readers by having them build one step at a time.
