@@ -12,8 +12,6 @@ This repository contains a revitialization of the idea of a self-programming rob
 
 The challenge of this project is to make a build of the microcomputer system to examine the merit of the "self-programming" claim. On this rests *everything* claimed 'A.I.'. This is a total misnomer and will need to be discussed in great detail.
 
-Also here is the earliest 86-DOS version to be [published](/software/ReadMe.md). CP/M is a concerted effort going forward.
-
 ### Progress
 
 The foundations in metal have been constructed and starting the design phase.
