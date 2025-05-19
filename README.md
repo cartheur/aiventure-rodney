@@ -14,7 +14,7 @@ The challenge of this project is to make a build of the microcomputer system to 
 
 ### Progress
 
-The foundations in metal have been constructed and starting the design phase.
+The publication for this is drafted [here](https://github.com/pub-n-dub/native-self-programming).
 
 Have the UI indicator light pattern thusly:
 
