@@ -22,7 +22,7 @@ Here we are using binary to program the machine. In order to accomplish this, a 
 
 ![pattern](/images/indicating-pattern.jpg)
 
-### Errata to consider in focus
+### Errata
 
 As it is necessary to explore the algorithm of [ideal](https://github.com/cartheur/ideal), we are stretching into unknown realms. How do we document this unexpected journey?
 
