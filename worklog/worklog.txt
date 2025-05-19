@@ -11,18 +11,10 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     1408: The stress-test of the glue hold did not go so well. But this is still a place to solve this problem. I went ahead and glued the remaining bezels with a bit of a twist to set the glue more evenly around the radius. Will give it 24 hours to see how it sets.
 01.01.2024
     1613: After some slacktime, I resumed work the 22nd of December 2023 on the mounts for the two Vector boards (a decision not to use the smaller ones) and a hinge-based smaller board to hold the beginnings of the I/O components, pretty much just the 8226 bus transceivers. It took some time to get a design in-place and eight prototypes before four properly-sized mounts for the boards were correct. The hinge went well in a single go, as well as the bar support.
-    1617: Now I want to formally prepare the full BoM and align as I have a pending Mouser order that needs to be submitted tomorrow.
-    1630: Formalizing this document will take some time. Let me pull the parts, mostly the resistors and capacitors, and check that the list is complete.
-    1817: Just finished the BoM for the M6x09-I-SBC, as a template for how to do such in the future. I would really like to have each board fully assembled by machine. Now to pull the parts and see what Rodney maybe missing.
-    1852: Reorganized the repository. Now is a bit clearer and more pragmatic. Will use the tables and the parts list sheet to know if I have all the bits. The big question is where did I get the DIP24-600?
-    2110: Completed the BoM based on the tables from the book. Added a 32-pin PROM and the appropriate wirewrap socket for the additional storage via cartridge or tape. Let’s see what shakes. The list is ready and will cross-check tomorrow before sending the order.
-03.01.2024
-    1603: As, essentially, this project is a historical revisitation – not unlike the intent of spiritualists of the 1890s – with an emphasis on embodiment (very much so) I have elected to include the oldest discovered version of 86-DOS (predecessor of MS-DOS) that was an outgrowth of the 8-bit CP/M but targeted the new 16-bit 8086 in this GitHub repository. The idea is that software is very much a part of this journey and although the i8085 is capable clearly of CP/M, given its unique UI, this will only be explored in terms of the program monitor that I have planned to be burned into the ROM, once I place it. I am contemplating a change in design to include it based on the design principles I have codified for the 6x09-II-SBC project.
 10.05.2024
-    948: I have come to the realization that there is work to be done on my ideal-metal initiative here in 8-bit land.
+    948: I have come to the realization that there is work to be done on my ideal-metal initiative here in 8-bit land. Any manifestations of learning should be visible at this level. I need to contemplate further.
 17.05.2025
-    2005: This project is back to active status.
+    2005: Completed the extended contemplation on this topic. Not easy as it is obfuscated and given how the world looks and operates, a pretty good probability was hidden for a reason. But not going to point fingers or assign shade, just investigate if relevant and what it looks like. Now we can move forward.
 19.05.2025
     931: Created a Kanban board and will capture the work from Jan-2024, as a way to track progress and to create an inflection point.
     944: Addressed the self-programming context with Grok and added a new section for this feature so that I can keenly understand its implications and implementation.
-    
