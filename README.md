@@ -16,11 +16,12 @@ The challenge of this project is to make a build of the microcomputer system to 
 
 The publication for this is drafted [here](https://github.com/pub-n-dub/native-self-programming).
 
-### Wiring-up the user-interface (UI)
+### The Build
 
-Here we are using binary to program the machine. In order to accomplish this, a set of swutches and lights indicate the patterns that are input. The UI indicator light pattern is thusly:
+There is _a lot_ of work to be done for this project. It is parceled into sections:
 
-![pattern](/images/indicating-pattern.jpg)
+* [The Front Panel UI](/build/5-front-panel/README.md)
+
 
 ### Errata
 
