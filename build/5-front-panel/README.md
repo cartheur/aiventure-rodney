@@ -26,7 +26,7 @@ Where the corresponding wiring pattern of the _user interface_ is thusly:
 
 ![pattern](/build/5-front-panel/interface/user-interface.png)
 
-Using the colors from the lamps to show where the wires connect.
+Using the colors from the lamps to show where the wires [connect](/tools/README.md).
 
 _Connection from the panel_
 
