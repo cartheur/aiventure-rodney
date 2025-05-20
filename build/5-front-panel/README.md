@@ -18,8 +18,18 @@ In order to accomplish this, a set of three cables extend from a set of pins to 
 
 ![fig5.1](/build/5-front-panel/images/fig.5-1.png)
 
+Where the detail of the connections (addressing) is recommended as:
+
+![fig5.5](/build/5-front-panel/images/fig.5-5.png)
+
 Where the corresponding wiring pattern of the _user interface_ is thusly:
 
 ![pattern](/build/5-front-panel/interface/user-interface.png)
 
 Using the colors from the lamps to show where the wires connect.
+
+_Connection from the panel_
+
+The wires coming into the triad of 16-pin ribbon cable will first be wired to the appropriate connections:
+
+![fig5.7](/build/5-front-panel/images/fig.5-7.png)
