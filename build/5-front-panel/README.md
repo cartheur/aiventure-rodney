@@ -32,6 +32,10 @@ Where the detail of the connections (addressing) is recommended as:
 
 ![fig5.5](/build/5-front-panel/images/fig.5-5.png)
 
+And the detail of the connections (data) is recommended as:
+
+![fig5.8](/build/5-front-panel/images/fig.5-8.png)
+
 Where the corresponding wiring pattern of the _user interface_ is thusly:
 
 ![pattern](/build/5-front-panel/interface/user-interface.png)
