@@ -33,3 +33,7 @@ _Connection from the panel_
 The wires coming into the triad of 16-pin ribbon cable will first be wired to the appropriate connections:
 
 ![fig5.7](/build/5-front-panel/images/fig.5-7.png)
+
+That leads into the bus system components:
+
+![fig5.6](/build/5-front-panel/images/fig.5-6.png)
