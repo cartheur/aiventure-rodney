@@ -31,4 +31,5 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     1216: Created the .md page for the steps thusfar for 5.
     1253: Added future chapter work and a means to present results clearly and cleanly.
     1301: Made a "working version" of the wiring figure with a grey background as the white was just too bright.
+    1531: Amended the panel drawing and still have to reconcile the +5v as it might be errantly in the diagram.
     
