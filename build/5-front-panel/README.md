@@ -10,10 +10,10 @@ Is to assemble the front panel assembly that looks like this:
 
 In order to accomplish this, a set of three cables extend from a set of pins to another board:
 
-![fig5.1](/build/5-front-panel/fig.5-1.png)
+![fig5.1](/build/5-front-panel/images/fig.5-1.png)
 
-Where the corresponding wiring pattern is thusly:
+Where the corresponding wiring pattern of the _user interface_ is thusly:
 
-![pattern](/build/5-front-panel/wiring/user-interface.png)
+![pattern](/build/5-front-panel/interface/user-interface.png)
 
 Using the colors from the lamps to show where the wires connect.
