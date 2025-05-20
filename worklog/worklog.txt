@@ -36,3 +36,5 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     1644: Found more stuff that needed refinement and I am getting to know this system very well again!
     1702: Went into the resistor banks and there are some choices on using DIP headers - either two 40s and one 24 or four 24s. Next question is the next board should be a Vector-board, right? But this is moving toward OPS. OK.
     1706: Whew! What a day: Now ready to take a walking break.
+    1805: Done for the day.
+    
