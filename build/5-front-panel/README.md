@@ -38,8 +38,8 @@ And the detail of the connections (data) is recommended as:
 
 Notice how:
 
-* `+5v`, denoted as `PZ02` - `PIN 16` is shared between the address and data circuits and,
-* `COMM`,denoted as `PZ02` - `PIN 8` is shared between all circuits in the panel.
+* `+5v`, denoted as `PZ02` - `PIN 16`, is shared between the address and data circuits and,
+* `COMM`, denoted as `PZ02` - `PIN 8`, is shared between all circuits in the panel.
 
 Therefore, the corresponding wiring pattern of the _user interface_ is thusly:
 
