@@ -32,6 +32,7 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     1253: Added future chapter work and a means to present results clearly and cleanly.
     1301: Made a "working version" of the wiring figure with a grey background as the white was just too bright.
     1531: Amended the panel drawing and still have to reconcile the +5v as it might be errantly in the diagram.
-    1612: Gathered the LED data and sheets, created a table to align forward-voltage, and now ready to take a walking break.
+    1612: Gathered the LED data and sheets, created a table to align forward-voltage.
     1644: Found more stuff that needed refinement and I am getting to know this system very well again!
+    1702: Went into the resistor banks and there are some choices on using DIP headers - either two 40s and one 24 or four 24s. Next question is the next board should be a Vector-board, right? Whew! What a day: Now ready to take a walking break.
     
