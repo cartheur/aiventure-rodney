@@ -20,6 +20,10 @@ Where we have the orange indicators as the low 4-bits, green indicators as the m
 | Green Diffused       | 2.1        | LiteOn       |
 | Yellow Diffused      | 2.1        | Lumex        |
 
+Where the notion of _diffused_ gives a special property:
+
+![diffused](/tools/images/diffused.jpg)
+
 In order to accomplish this, a set of three cables extend from a set of pins to another board:
 
 ![fig5.1](/build/5-front-panel/images/fig.5-1.png)
