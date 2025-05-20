@@ -6,7 +6,7 @@ While Rodney is essentially a self-programming machine, there is still a need fo
 
 Is to assemble the front panel assembly that looks like this:
 
-![assembly](/images/indicating-pattern.jpg)
+![assembly](/build/5-front-panel/images/indicating-pattern.jpg)
 
 In order to accomplish this, a set of three cables extend from a set of pins to another board:
 
