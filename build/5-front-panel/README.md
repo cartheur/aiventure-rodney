@@ -15,3 +15,5 @@ In order to accomplish this, a set of three cables extend from a set of pins to 
 Where the corresponding wiring pattern is thusly:
 
 ![pattern](/build/5-front-panel/wiring/user-interface.png)
+
+Using the colors from the lamps to show where the wires connect.
