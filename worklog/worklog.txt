@@ -29,4 +29,5 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     948: Resuming where I left-off yesterday.
     1146: Wasted two hours working on a "8085 trainer" circuit design, based on some late-night thoughts. While AI seems helpful, it's total shit since it cannot close the loop.
     1216: Created the .md page for the steps thusfar for 5.
+    1253: Added future chapter work and a means to present results clearly and cleanly.
     
