@@ -53,6 +53,12 @@ The wires coming into the triad of 16-pin ribbon cable will first be wired to th
 
 ![fig5.7](/build/5-front-panel/images/fig.5-7.png)
 
+For the address and for the data:
+
+![fig5.10](/build/5-front-panel/images/fig.5-10.png)
+
+Meaning there are a total of `12 AL` + `12 AS` + `8 DL` + `8 DS` + `2 SS` + `1 PB` = 43 slots.
+
 That leads into the bus system components:
 
 ![fig5.6](/build/5-front-panel/images/fig.5-6.png)
