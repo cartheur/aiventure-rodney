@@ -1,27 +1,24 @@
 # aiventure-rodney
 
-A project revolving around Heiserman's 1979 robotics proposition. The focus is _scratch-building_ computer that possesses and executes self-learning machine code. They [ref]--(I think an Motorola 6800 computer design book) say this is _a dangerous practice_ having a comptuer self-generate code - with the notion that it programs - but if we do not start seriously exploring in slower formats (slow that our brains can recognize *good* from *bad*), then we we stay stuck.
+A project revolving around Heiserman's 1979 robotics proposition. The focus is _scratch-building_ computer that possesses and executes self-learning machine code. They [ref]--(I think an Motorola 6800 computer design book) say this is _a dangerous practice_ having a comptuer self-generate code - with the notion that it programs - but if we do not start seriously exploring in slower formats (slow that our brains can recognize *good* from *bad*), then we we stay stuck. Given the time spent with _Ideal_, games will get one just so far; an effort begins today where we emplant Rodney onto a wheeled platform. Once there, we will backpropagate different kinds of dangerous things. I think this has been accomplished before, I mean the robot by the unknown designer and creator a late academic dubbed _Tati_. And I've watched his films, they are subtley brilliant.
 
-Given the time spent with _Ideal_, games will get one just so far; an effort begins today where we emplant Rodney onto a wheeled platform. Once there, we will backpropagate different kinds of dangerous things.
+## Challenge
 
-I think this has been accomplished before, I mean the robot by the unknown designer and creator a late academic dubbed _Tati_. And I've watched his films, they are brilliant and keep me in this vein.
-
-## What is in here?
-
-This repository contains a revitialization of the idea of a self-programming robot coupled with the ambition to learn the deepest aspects of how a computer functions at its most basic level. The book, written in 1978, leverages an Intel 8085 8-bit (the very last CPU made to this specification) where the reader builds up the system from scratch including the logic, buffers, and memory systems. Additionally, a tape-drive storage interface is described. Not just an historical curiousity, Rodney continues to teach readers by having them build one step at a time.
-
-The challenge of this project is to make a build of the microcomputer system to examine the merit of the "self-programming" claim. On this rests *everything* claimed 'A.I.'. This is a total misnomer and will need to be discussed in great detail.
-
-### Progress
-
-The publication for this is drafted [here](https://github.com/pub-n-dub/native-self-programming).
+This repository contains a revitialization of the idea of a self-programming robot coupled with the ambition to learn the deepest aspects of how a computer functions at its most basic level. The book, written in 1979, leverages an Intel 8085 8-bit (the very last CPU made to this specification) where the reader builds up the system from scratch including the logic, buffers, and memory systems. Additionally, a tape-drive storage interface is described. Not just an historical curiousity, Rodney continues to teach readers by having them build one step at a time. The challenge of this project is to make a build of the microcomputer system to examine the merit of the "self-programming" claim. On this rests *everything* claimed 'A.I.'. This is a total misnomer and will need to be discussed in great detail.
 
 ### The Build
 
 There is _a lot_ of work to be done for this project. It is parceled into sections:
 
 * [The Front Panel UI](/build/5-front-panel/README.md)
+* [Function-Select Circuitry](/build/6-function-select/README.md)
+* [RAM and Ports](/build/7-ram-ports/README.md)
+* [Motor-Drive Assembly](/build/8-motor-control/README.md)
+* [The Microprocessor](/build/9-microprocessor/README.md)
 
+### Pubbing
+
+The publication for this is drafted [here](https://github.com/pub-n-dub/native-self-programming).
 
 ### Errata
 
