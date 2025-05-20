@@ -59,11 +59,11 @@ For the address and for the data:
 
 Meaning there are these requring a 22k-Ohm resistor:
 
-* `12 AS` + `8 DS` + `2 SS` + `1 PB` = 23 slots.
+* `12 AS` (`PR207`) + `8 DS` + `2 SS` + `1 PB` (`PR205`) = 23 slots.
 
 And these requiring a 150-Ohm resistor bank:
 
-* `12 AL` + `8 DL` = 20 slots.
+* `12 AL` (`PR208`) + `8 DL` (`PR206`) = 20 slots.
 
 That leads into the bus system components:
 
