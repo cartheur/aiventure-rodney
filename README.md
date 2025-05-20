@@ -22,6 +22,8 @@ The publication for this is drafted [here](https://github.com/pub-n-dub/native-s
 
 ### Errata
 
+Tooling used for this project is kept [here](/tools/README.md).
+
 As it is necessary to explore the algorithm of [ideal](https://github.com/cartheur/ideal), we are stretching into unknown realms. How do we document this unexpected journey?
 
 * An alternative to the Von Neumann architecture is the [initiative](/literature/s41565-020-0738-x.pdf).
