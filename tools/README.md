@@ -6,7 +6,7 @@ _Wire_
 
 ![ww-awg28](/tools/images/jonard-ww-awg28.png)
 
-Several colors of wirewrap wire will be used. These are:
+Several colors of wirewrap wire will be used to correspond to the different colors utilized in the interface. These are:
 
 * Blue
 * Red (mock orange)
