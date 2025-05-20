@@ -18,7 +18,7 @@ Where we have the orange indicators as the low 4-bits, green indicators as the m
 |----------------------|------------|--------------|
 | Pure Orange Diffused | 2.1        | Kingbright   |
 | Green Diffused       | 2.1        | LiteOn       |
-| Yellow 588nm         | 2.1        | Lumex        |
+| Yellow Diffused      | 2.1        | Lumex        |
 
 In order to accomplish this, a set of three cables extend from a set of pins to another board:
 
