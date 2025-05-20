@@ -12,7 +12,13 @@ Is to assemble the front panel assembly that looks like this:
 
 ![assembly](/build/5-front-panel/images/indicating-pattern.jpg)
 
-Where we have the orange indicators as the low 4-bits, green indicators as the mid 4-bits of the address-bus and high 4-bits for the data-bus, yellow indicators as the high 4-bits of the address-bus.
+Where we have the orange indicators as the low 4-bits, green indicators as the mid 4-bits of the address-bus and high 4-bits for the data-bus, yellow indicators as the high 4-bits of the address-bus. The LEDs to be used are these:
+
+| Color                | Voltage Vf | Manufacturer |
+|----------------------|------------|--------------|
+| Pure Orange Diffused | 2.1        | Kingbright   |
+| Yellow 588nm         | 2.1        | Lumex        |
+| Green Diffused       | 2.1        | LiteOn       |
 
 In order to accomplish this, a set of three cables extend from a set of pins to another board:
 
