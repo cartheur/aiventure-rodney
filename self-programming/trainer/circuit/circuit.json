@@ -1,0 +1,444 @@
+{
+    "schematic": {
+      "title": "8085 Trainer Kit with 62256 SRAM and 5 MHz Clock",
+      "description": "Minimal 8085 trainer for self-modifying code with SOD LED, 62256 SRAM, and DIP switch input.",
+      "components": [
+        {
+          "ref": "U1",
+          "value": "8085A",
+          "library": "microcontroller",
+          "footprint": "DIP-40",
+          "pins": {
+            "1": "X1",
+            "2": "X2",
+            "3": "RESET_OUT",
+            "4": "SOD",
+            "5": "SID",
+            "6": "TRAP",
+            "7": "RST5.5",
+            "8": "RST6.5",
+            "9": "RST7.5",
+            "10": "CLK_OUT",
+            "11": "INTA",
+            "12": "AD0",
+            "13": "AD1",
+            "14": "AD2",
+            "15": "AD3",
+            "16": "AD4",
+            "17": "AD5",
+            "18": "AD6",
+            "19": "AD7",
+            "20": "VSS",
+            "21": "A8",
+            "22": "A9",
+            "23": "A10",
+            "24": "A11",
+            "25": "A12",
+            "26": "A13",
+            "27": "A14",
+            "28": "A15",
+            "29": "S0",
+            "30": "ALE",
+            "31": "WR",
+            "32": "RD",
+            "33": "S1",
+            "34": "IO/M",
+            "35": "READY",
+            "36": "RESET_IN",
+            "37": "CLK_OUT",
+            "38": "HOLD",
+            "39": "HLDA",
+            "40": "VCC"
+          }
+        },
+        {
+          "ref": "U2",
+          "value": "HM62256",
+          "library": "memory",
+          "footprint": "DIP-28",
+          "pins": {
+            "1": "A14",
+            "2": "A12",
+            "3": "A7",
+            "4": "A6",
+            "5": "A5",
+            "6": "A4",
+            "7": "A3",
+            "8": "A2",
+            "9": "A1",
+            "10": "A0",
+            "11": "D0",
+            "12": "D1",
+            "13": "D2",
+            "14": "VSS",
+            "15": "D3",
+            "16": "D4",
+            "17": "D5",
+            "18": "D6",
+            "19": "D7",
+            "20": "CS",
+            "21": "A10",
+            "22": "OE",
+            "23": "A11",
+            "24": "A9",
+            "25": "A8",
+            "26": "A13",
+            "27": "WE",
+            "28": "VCC"
+          }
+        },
+        {
+          "ref": "U3",
+          "value": "74LS373",
+          "library": "74xx",
+          "footprint": "DIP-20",
+          "pins": {
+            "1": "OC",
+            "2": "Q0",
+            "3": "D0",
+            "4": "D1",
+            "5": "Q1",
+            "6": "Q2",
+            "7": "D2",
+            "8": "D3",
+            "9": "Q3",
+            "10": "VSS",
+            "11": "G",
+            "12": "Q4",
+            "13": "D4",
+            "14": "D5",
+            "15": "Q5",
+            "16": "Q6",
+            "17": "D6",
+            "18": "D7",
+            "19": "Q7",
+            "20": "VCC"
+          }
+        },
+        {
+          "ref": "U4",
+          "value": "74LS138",
+          "library": "74xx",
+          "footprint": "DIP-16",
+          "pins": {
+            "1": "A",
+            "2": "B",
+            "3": "C",
+            "4": "G2A",
+            "5": "G2B",
+            "6": "G1",
+            "7": "Y7",
+            "8": "VSS",
+            "9": "Y6",
+            "10": "Y5",
+            "11": "Y4",
+            "12": "Y3",
+            "13": "Y2",
+            "14": "Y1",
+            "15": "Y0",
+            "16": "VCC"
+          }
+        },
+        {
+          "ref": "Y1",
+          "value": "5MHz",
+          "library": "device",
+          "footprint": "HC-49",
+          "pins": {
+            "1": "XTAL1",
+            "2": "XTAL2"
+          }
+        },
+        {
+          "ref": "C1",
+          "value": "22pF",
+          "library": "device",
+          "footprint": "C_0805",
+          "pins": {
+            "1": "C1_1",
+            "2": "C1_2"
+          }
+        },
+        {
+          "ref": "C2",
+          "value": "22pF",
+          "library": "device",
+          "footprint": "C_0805",
+          "pins": {
+            "1": "C2_1",
+            "2": "C2_2"
+          }
+        },
+        {
+          "ref": "C3",
+          "value": "10uF",
+          "library": "device",
+          "footprint": "C_1206",
+          "pins": {
+            "1": "C3_1",
+            "2": "C3_2"
+          }
+        },
+        {
+          "ref": "C4",
+          "value": "0.1uF",
+          "library": "device",
+          "footprint": "C_0805",
+          "pins": {
+            "1": "C4_1",
+            "2": "C4_2"
+          }
+        },
+        {
+          "ref": "R1",
+          "value": "10k",
+          "library": "device",
+          "footprint": "R_0805",
+          "pins": {
+            "1": "R1_1",
+            "2": "R1_2"
+          }
+        },
+        {
+          "ref": "R2",
+          "value": "330",
+          "library": "device",
+          "footprint": "R_0805",
+          "pins": {
+            "1": "R2_1",
+            "2": "R2_2"
+          }
+        },
+        {
+          "ref": "R3",
+          "value": "10k",
+          "library": "device",
+          "footprint": "R_0805",
+          "pins": {
+            "1": "R3_1",
+            "2": "R3_2"
+          }
+        },
+        {
+          "ref": "LED1",
+          "value": "LED",
+          "library": "device",
+          "footprint": "LED_0805",
+          "pins": {
+            "1": "ANODE",
+            "2": "CATHODE"
+          }
+        },
+        {
+          "ref": "SW1",
+          "value": "RESET_SWITCH",
+          "library": "device",
+          "footprint": "SW_Push",
+          "pins": {
+            "1": "SW1_1",
+            "2": "SW1_2"
+          }
+        },
+        {
+          "ref": "SW2",
+          "value": "DIP_SWITCH_8",
+          "library": "device",
+          "footprint": "DIP-8",
+          "pins": {
+            "1": "D0",
+            "2": "D1",
+            "3": "D2",
+            "4": "D3",
+            "5": "D4",
+            "6": "D5",
+            "7": "D6",
+            "8": "D7"
+          }
+        },
+        {
+          "ref": "U5",
+          "value": "7805",
+          "library": "device",
+          "footprint": "TO-220",
+          "pins": {
+            "1": "VIN",
+            "2": "GND",
+            "3": "VOUT"
+          }
+        },
+        {
+          "ref": "C5",
+          "value": "100uF",
+          "library": "device",
+          "footprint": "C_1206",
+          "pins": {
+            "1": "C5_1",
+            "2": "C5_2"
+          }
+        }
+      ],
+      "nets": [
+        {
+          "name": "VCC",
+          "connections": [
+            "U1.40", "U2.28", "U3.20", "U4.16", "U5.3", "C4.1", "C5.1", "LED1.1", "R1.1", "R3.1"
+          ]
+        },
+        {
+          "name": "GND",
+          "connections": [
+            "U1.20", "U2.14", "U3.10", "U4.8", "U5.2", "C1.2", "C2.2", "C3.2", "C4.2", "C5.2", "R1.2", "R3.2", "SW1.2"
+          ]
+        },
+        {
+          "name": "AD0",
+          "connections": ["U1.12", "U3.3", "U2.11"]
+        },
+        {
+          "name": "AD1",
+          "connections": ["U1.13", "U3.4", "U2.12"]
+        },
+        {
+          "name": "AD2",
+          "connections": ["U1.14", "U3.7", "U2.13"]
+        },
+        {
+          "name": "AD3",
+          "connections": ["U1.15", "U3.8", "U2.15"]
+        },
+        {
+          "name": "AD4",
+          "connections": ["U1.16", "U3.13", "U2.16"]
+        },
+        {
+          "name": "AD5",
+          "connections": ["U1.17", "U3.14", "U2.17"]
+        },
+        {
+          "name": "AD6",
+          "connections": ["U1.18", "U3.17", "U2.18"]
+        },
+        {
+          "name": "AD7",
+          "connections": ["U1.19", "U3.18", "U2.19"]
+        },
+        {
+          "name": "A0",
+          "connections": ["U3.2", "U2.10"]
+        },
+        {
+          "name": "A1",
+          "connections": ["U3.5", "U2.9"]
+        },
+        {
+          "name": "A2",
+          "connections": ["U3.6", "U2.8"]
+        },
+        {
+          "name": "A3",
+          "connections": ["U3.9", "U2.7"]
+        },
+        {
+          "name": "A4",
+          "connections": ["U3.12", "U2.6"]
+        },
+        {
+          "name": "A5",
+          "connections": ["U3.15", "U2.5"]
+        },
+        {
+          "name": "A6",
+          "connections": ["U3.16", "U2.4"]
+        },
+        {
+          "name": "A7",
+          "connections": ["U3.19", "U2.3"]
+        },
+        {
+          "name": "A8",
+          "connections": ["U1.21", "U2.25"]
+        },
+        {
+          "name": "A9",
+          "connections": ["U1.22", "U2.24"]
+        },
+        {
+          "name": "A10",
+          "connections": ["U1.23", "U2.21"]
+        },
+        {
+          "name": "A11",
+          "connections": ["U1.24", "U2.23"]
+        },
+        {
+          "name": "A12",
+          "connections": ["U1.25", "U2.2"]
+        },
+        {
+          "name": "A13",
+          "connections": ["U1.26", "U2.26", "U4.1"]
+        },
+        {
+          "name": "A14",
+          "connections": ["U1.27", "U2.1", "U4.2"]
+        },
+        {
+          "name": "A15",
+          "connections": ["U1.28", "U4.3"]
+        },
+        {
+          "name": "ALE",
+          "connections": ["U1.30", "U3.11"]
+        },
+        {
+          "name": "RD",
+          "connections": ["U1.32", "U2.22"]
+        },
+        {
+          "name": "WR",
+          "connections": ["U1.31", "U2.27"]
+        },
+        {
+          "name": "IO/M",
+          "connections": ["U1.34", "U4.6"]
+        },
+        {
+          "name": "CS_RAM",
+          "connections": ["U4.15", "U2.20"]
+        },
+        {
+          "name": "XTAL1",
+          "connections": ["U1.1", "Y1.1", "C1.1"]
+        },
+        {
+          "name": "XTAL2",
+          "connections": ["U1.2", "Y1.2", "C2.1"]
+        },
+        {
+          "name": "RESET_IN",
+          "connections": ["U1.36", "C3.1", "SW1.1", "R1.1"]
+        },
+        {
+          "name": "SOD",
+          "connections": ["U1.4", "R2.2"]
+        },
+        {
+          "name": "LED_OUT",
+          "connections": ["R2.1", "LED1.2"]
+        },
+        {
+          "name": "TRAP",
+          "connections": ["U1.6", "R3.1"]
+        },
+        {
+          "name": "DIP_INPUT",
+          "connections": ["SW2.1", "SW2.2", "SW2.3", "SW2.4", "SW2.5", "SW2.6", "SW2.7", "SW2.8", "U2.11", "U2.12", "U2.13", "U2.15", "U2.16", "U2.17", "U2.18", "U2.19"]
+        }
+      ],
+      "notes": {
+        "decoding": "74LS138 Y0 selects 62256 for 0000H-7FFFH (A15=0). G1 tied to IO/M (inverted via 74LS04 if needed).",
+        "unused_pins": "U1: SID(5), RST5.5(7), RST6.5(8), RST7.5(9), INTA(11), CLK_OUT(10,37), S0(29), S1(33), READY(35), HOLD(38), HLDA(39) unconnected. U3: OC(1) to GND. U4: G2A(4), G2B(5) to GND, Y1-Y7 unused.",
+        "kicad_import": "Manually place components in KiCad using standard libraries. Connect nets per JSON. Add power flags for VCC/GND. Use DIP footprints for ICs."
+      }
+    }
+  }
