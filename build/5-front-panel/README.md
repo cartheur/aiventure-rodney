@@ -57,7 +57,13 @@ For the address and for the data:
 
 ![fig5.10](/build/5-front-panel/images/fig.5-10.png)
 
-Meaning there are a total of `12 AL` + `12 AS` + `8 DL` + `8 DS` + `2 SS` + `1 PB` = 43 slots.
+Meaning there are these requring a 22k-Ohm resistor:
+
+* `12 AS` + `8 DS` + `2 SS` + `1 PB` = 23 slots.
+
+And these requiring a 150-Ohm resistor bank:
+
+* `12 AL` + `8 DL` = 20 slots.
 
 That leads into the bus system components:
 
