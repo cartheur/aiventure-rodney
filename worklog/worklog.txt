@@ -32,4 +32,5 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     1253: Added future chapter work and a means to present results clearly and cleanly.
     1301: Made a "working version" of the wiring figure with a grey background as the white was just too bright.
     1531: Amended the panel drawing and still have to reconcile the +5v as it might be errantly in the diagram.
+    1612: Gathered the LED data and sheets, created a table to align forward-voltage, and now ready to take a walking break.
     
