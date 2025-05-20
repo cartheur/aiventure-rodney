@@ -36,7 +36,12 @@ And the detail of the connections (data) is recommended as:
 
 ![fig5.8](/build/5-front-panel/images/fig.5-8.png)
 
-Notice how the `+5v` line, denoted as `PZ02`, `PIN 16` is shared between and the `COMM` line for all is denoted as `PZ02`, `PIN 8`. Therefore, the corresponding wiring pattern of the _user interface_ is thusly:
+Notice how:
+
+* `+5v`, denoted as `PZ02`, `PIN 16` is shared between the address and data circuits and,
+* `COMM`,denoted as `PZ02`, `PIN 8` is shared between all circuits in the panel.
+
+Therefore, the corresponding wiring pattern of the _user interface_ is thusly:
 
 ![pattern](/build/5-front-panel/interface/user-interface.png)
 
