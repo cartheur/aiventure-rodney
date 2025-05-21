@@ -1,6 +1,6 @@
 # 3D Printed Model Suggestion for Robot with 18-Inch Circular Base
 
-This model is designed for a robot with an 18-inch circular base, incorporating a card rack assembly to fit Vector 8801-6 S-100 bus boards (10.5 inches × 5.3 inches). The design is modular to facilitate 3D printing on standard printers.
+This model is designed for a robot with an 18-inch circular base, incorporating a card rack assembly to fit Vector 8801-6 S-100 bus boards (10.5 inches × 5.3 inches). The design is modular to facilitate 3D printing on standard printers. The actual design suggestions are [here](/design/PRINT.md).
 
 ## Key Dimensions and Components
 

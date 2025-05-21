@@ -48,4 +48,4 @@ _Description_
 
 ### Grok-generated 3D printing design suggestions
 
-It is over [here](/design/GROK.md).
+The textual description is [here](/design/GROK.md), while details of FreeCAD design are [here](/design/PRINT.md).
