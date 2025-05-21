@@ -17,7 +17,7 @@ Reanalyzing the for a rack structure that is 36 cm high by 25 cm wide by 25 cm d
 * Height: 360 mm
 * Weight: 23 kg
 
-### The Vector board 8801-6, S-100 bus
+### The Vector board 8801-6 using a S-100 bus
 
 ![8801-6](/design/vector-8801-6.gif)
 
@@ -43,7 +43,5 @@ _Description_
 * I/O mounting area for ribbon cable header
 * Row and column legends provided
 * S-100 Form Factor
-* Pin 1 and 51 committed to power.
-* Pin 50 and 100 committed to ground.
-
-
+* Pin `1` and `51` committed to power.
+* Pin `50` and `100` committed to ground.
