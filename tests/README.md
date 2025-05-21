@@ -2,7 +2,7 @@
 
 A series of sanity checks and operational tests are contained in this folder. Note that textural references to hexidecimal numbers will have the `H` character as suffix.
 
-### Check (asm)
+### Check
 
 _Analysis_
 
