@@ -2,6 +2,8 @@
 
 This analysis evaluates whether the 0.5-inch thick circular bottom plate of a robot can support its approximate weight of 23 kg when 3D printed using PLA. The plate's structural integrity is assessed for bending stress and deflection, considering PLA's material properties and the robot's load distribution.
 
+Filament (PLA) particulars are detailed [here](/design/FILAMENT.md).
+
 ## Key Parameters
 
 - **Bottom Plate Dimensions**:
