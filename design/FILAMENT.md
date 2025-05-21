@@ -112,6 +112,8 @@ In 3D printing, the part has an infill structure (20% infill) with solid outer s
 - **Design 2 (0.75-inch thick plate)**:
   - PLA Required: **1,116.26 cm³**, equivalent to **464.24 meters** of 1.75 mm filament.
 
+Be aware that A 1 kg spool of 1.75 mm PLA filament contains approximately 335.14 meters of filament.
+
 ## Notes
 
 - **Accuracy**: This assumes 20% infill, 3 perimeter shells, and 4 top/bottom layers. Adjusting these settings (e.g., infill percentage, shell count, layer height) will change filament usage.
