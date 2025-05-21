@@ -2,7 +2,9 @@
 
 This guide provides a step-by-step process to design a 3D printable robot in FreeCAD, based on a circular base of 18 inches and a card rack for Vector 8801-6 S-100 bus boards. The components will be designed as separate parts, which can be exported as STL files for 3D printing.
 
-If safety has primacy, have a look at thickness increase and ribbing discussed [here](/design/SAFETY.md).
+* If safety has primacy, have a look at thickness increase and ribbing discussed [here](/design/SAFETY.md).
+* Look at the analysis of two thicknesses of the disk and skirt [here](/design/FILAMENT.md).
+* For a total caluclation of the amount of PLA required for the infrastructure, see [here](/design/TOTAL.md).
 
 ## Project Overview: Robot Components
 
