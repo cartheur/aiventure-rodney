@@ -31,4 +31,5 @@ As it is necessary to explore the algorithm of [ideal](https://github.com/carthe
 * A combination of hardware and software [implementation](https://en.wikipedia.org/wiki/In-memory_processing).
 * What are some forward-looking paths, considering the initiatives, without going into the nanoscale esoteric?
 * SRAM and DRAM are perfectly capable of performing in-memory logic operations while NAND Flash memory is fit for matrix–vector multiplication operations.
-* In the context of the application-specific approach to computation, memory-based computational primitives can be used in a variety of tasks ranging from high-precision scientific computing to largely imprecise stochastic computing and everything in-between including deep learning in artificial neural networks (ANNs). 
+* In the context of the application-specific approach to computation, memory-based computational primitives can be used in a variety of tasks ranging from high-precision scientific computing to largely imprecise stochastic computing and everything in-between including deep learning in artificial neural networks (ANNs).
+* Development of microFORTH in 1976 for processors like Intel 8080 and Motorola 6800. 
