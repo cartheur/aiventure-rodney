@@ -10,6 +10,7 @@ This repository contains a revitialization of the idea of a self-programming rob
 
 There is _a lot_ of work to be done for this project. It is parceled into sections:
 
+* [Chassis Design](/design/README.md)
 * [The Front Panel UI](/build/5-front-panel/README.md)
 * [Function-Select Circuitry](/build/6-function-select/README.md)
 * [RAM and Ports](/build/7-ram-ports/README.md)
