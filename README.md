@@ -15,6 +15,7 @@ There is _a lot_ of work to be done for this project. It is parceled into sectio
 * [RAM and Ports](/build/7-ram-ports/README.md)
 * [Motor-Drive Assembly](/build/8-motor-control/README.md)
 * [The Microprocessor](/build/9-microprocessor/README.md)
+* [Tests](/tests/README.md)
 
 ### Pubbing
 
