@@ -40,4 +40,5 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
 21.05.2025
     1100: Seems a better and more robust approach to continue with the drawing-mapping of boards 100, 200, and 300 whilst attending to the actual prototypical structure of the robot. As it stands, the thing I made for the baords is a great workstation, but production, I'm skeptical. And besides - no wheels/motors! I'm contemplating to assemble what bits I may have and 3D print/design the circular bottom and card rack using pins and glue to set, as was successful with huggable. Wheels/tires and balance I need to design.
     1435: Given the crucial nature of needing a concrete design, am going to set a bassic structure in-place.
-    
+    1727: Have gone through all the elements of design I can think-of now and am at the end where I see to print everything.
+     
