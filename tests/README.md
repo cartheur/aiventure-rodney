@@ -11,7 +11,7 @@ _Analysis_
 * `TEST`:: A label marking the address `000H`.
 * `;RETURN TO TEST`: A comment indicating the purpose of the `C7` instruction, which is to return execution to the `TEST` label (address `000H`).
 
-This code creates a simple loop where the microprocessor executes a `NOP` at `000H`, then at 00`1H executes an instruction (`C7`) that returns it to `000H`, repeating indefinitely.
+This code creates a simple loop where the microprocessor executes a `NOP` at `000H`, then at `001H` executes an instruction (`C7`) that returns it to `000H`, repeating indefinitely.
 
 _Instructions_
 
