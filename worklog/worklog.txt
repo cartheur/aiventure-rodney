@@ -42,4 +42,6 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
     1435: Given the crucial nature of needing a concrete design, am going to set a bassic structure in-place.
     1727: Have gone through all the elements of design I can think-of now and am at the end where I see to print everything.
     1738: Finished for the day.
-     
+23.05.2025
+    946: Arrived at a design late on the 21st for dot based on the beautiful work in here. Will spend a bit of time seeing how it shakes.
+    
