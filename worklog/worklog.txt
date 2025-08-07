@@ -45,5 +45,5 @@ Intel’s advice was articulated in technical documentation like the Intel 8085 
 23.05.2025
     946: Arrived at a design late on the 21st for dot based on the beautiful work in here. Will spend a bit of time seeing how it shakes.
 07.08.2025
-    1200: Reviewing the 2114 setup.
-    
+    1200: Reviewing the 2114 setup, image 0701.
+
