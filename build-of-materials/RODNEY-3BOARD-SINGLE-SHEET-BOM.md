@@ -40,7 +40,7 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | CPU board | `10k` resistor | `axial resistor` | 2 | Board A | reset network |
 | `[ ]` | CPU board | `1uF` to `10uF` capacitor | `radial electrolytic` | 1 | Board A | reset timing |
 | `[ ]` | Memory board | `62256` SRAM | `DIP-28` | 1 | Board B | main memory |
-| `[ ]` | Memory board | `6264` SRAM | `DIP-28` | 1 | Board B | program RAM |
+| `[ ]` | Memory board | `6264` SRAM | `DIP-28` | 1 | Board B | program RAM; selected part: `Alliance AS6C6264-55PCN`, see [Alliance datasheet](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/datasheets/alliance/Alliance_Memory_64K_AS6C6264v2.0July2017.pdf:1) |
 | `[ ]` | Memory board | `28C16` or `28C64` EEPROM | `DIP-24 or DIP-28` | 1 | Board B | monitor / bootstrap |
 | `[ ]` | Memory board | `74LS138` | `DIP-16` | 1 | Board B | region decode |
 | `[ ]` | Memory board | `74LS139` | `DIP-16` | 1 | Board B | subdecode |
@@ -122,3 +122,13 @@ Board B placement note:
 - This sheet is meant to be the simplified current-build target list.
 - For the `2-connector` build, `Board C` is the best hard-wired candidate because it is the least likely board to need repeated removal during CPU and memory bring-up.
 - The one part family still worth deciding explicitly before ordering is the exact EEPROM package width, because that can affect whether you want a DIP-24 or DIP-28 socket in Board B.
+
+## Selected Memory Part
+
+Current selected `U7` program RAM:
+
+- `Alliance AS6C6264-55PCN`
+- `8K x 8`
+- `DIP-28` PDIP
+- commercial temp grade `0C to 70C`
+- preferred over `AS6C6264-55PIN` because the industrial-temperature variant costs about `EUR 5` more per device without adding useful value for the current bench build

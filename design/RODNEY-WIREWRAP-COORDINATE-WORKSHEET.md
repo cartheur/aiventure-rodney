@@ -95,7 +95,7 @@ Role: program RAM, monitor ROM, learned-state memory, decode, MMA/MMD path.
 | `U4` | MMA low latch | DIP-20 narrow | `X48, Y20` | `E-W` | close to lower memory address side |
 | `U5` | MMA high latch | DIP-20 narrow | `X60, Y20` | `E-W` | close to upper memory address side |
 | `U6` | MMD path register / gate | DIP-20 narrow | `X73, Y20` | `E-W` | keep close to `U1` data side |
-| `U7` | `6264` program RAM | DIP-28 wide | `X12, Y28` | `E-W` | easy to isolate during bring-up |
+| `U7` | `6264` program RAM | DIP-28 wide | `X12, Y28` | `E-W` | selected part `Alliance AS6C6264-55PCN`; easy to isolate during bring-up |
 | `U8` | EEPROM / monitor ROM | DIP-28 wide | `X61, Y28` | `E-W` | opposite side from program RAM |
 | `TP1-TP8` | `/PRG_RAM_CS`, `/ROM_CS`, `/MMA_L_CS`, `/MMA_H_CS`, `/MMD_CS`, `MMA0`, `MMA8`, `D0` | test posts | `X10-X50, Y3` | row | keep contiguous |
 | `J1` | bus in / service header | 2-row header | `X84, Y26` | vertical | one clean ingress point |
