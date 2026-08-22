@@ -29,8 +29,8 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | Core | test posts / turret posts | `turret / post` | 18 | all boards | `6 + 8 + 4` top-edge minimum |
 | `[ ]` | Core | hard-wire interboard harness anchor points | `lug / header / clamp` | 1 set | Board C | header, solder lugs, or strain-relieved tie points |
 | `[ ]` | CPU board | `8085A` | `DIP-40` | 1 | Board A | CPU |
-| `[ ]` | CPU board | `74LS373` or `74HCT373` | `DIP-20` | 1 | Board A | address latch |
-| `[ ]` | CPU board | `74LS245` or `74HCT245` | `DIP-20` | 1 | Board A | data transceiver |
+| `[ ]` | CPU board | `74LS373` | `DIP-20` | 1 | Board A | address latch |
+| `[ ]` | CPU board | `74LS245` | `DIP-20` | 1 | Board A | data transceiver |
 | `[ ]` | CPU board | `74LS138` | `DIP-16` | 1 | Board A | coarse decode |
 | `[ ]` | CPU board | `74LS04` | `DIP-14` | 1 | Board A | clock/reset glue |
 | `[ ]` | CPU board | `74LS00` | `DIP-14` | 1 | Board A | glue logic |
@@ -44,13 +44,13 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | Memory board | `28C16` or `28C64` EEPROM | `DIP-24 or DIP-28` | 1 | Board B | monitor / bootstrap |
 | `[ ]` | Memory board | `74LS138` | `DIP-16` | 1 | Board B | region decode |
 | `[ ]` | Memory board | `74LS139` | `DIP-16` | 1 | Board B | subdecode |
-| `[ ]` | Memory board | `74LS273` or `74HCT273` | `DIP-20` | 2 | Board B | `MMA low`, `MMA high` |
-| `[ ]` | Memory board | `74LS245` or similar | `DIP-20` | 1 | Board B | `MMD` path / data isolation |
+| `[ ]` | Memory board | `74LS273` | `DIP-20` | 2 | Board B | `MMA low`, `MMA high` |
+| `[ ]` | Memory board | `74LS245` | `DIP-20` | 1 | Board B | `MMD` path / data isolation |
 | `[ ]` | Memory board | `74LS00` | `DIP-14` | 1 | Board B | decode glue |
 | `[ ]` | Memory board | `74LS32` | `DIP-14` | 1 | Board B | optional decode glue |
-| `[ ]` | I/O board | `74LS244` or `74HCT244` | `DIP-20` | 1 | Board C | input buffer |
-| `[ ]` | I/O board | `74LS273` or `74HCT273` | `DIP-20` | 1 | Board C | output latch |
-| `[ ]` | I/O board | `74LS164` or `74HC164` | `DIP-14` | 1 | Board C | pseudo-random source |
+| `[ ]` | I/O board | `74LS244` | `DIP-20` | 1 | Board C | input buffer |
+| `[ ]` | I/O board | `74LS273` | `DIP-20` | 1 | Board C | output latch |
+| `[ ]` | I/O board | `74LS164` | `DIP-14` | 1 | Board C | pseudo-random source |
 | `[ ]` | I/O board | `74LS86` | `DIP-14` | 1 | Board C | XOR feedback |
 | `[ ]` | I/O board | `8-position` DIP switch | `DIP switch, 8-pos` | 2 | Board C | `ENVL`, `ENVH` |
 | `[ ]` | I/O board | `5mm` LEDs | `T-1 3/4` | 16 | Board C | `ACTL` plus debug / `ACTH` |

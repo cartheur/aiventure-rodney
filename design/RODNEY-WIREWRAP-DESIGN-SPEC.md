@@ -178,8 +178,8 @@ Phase 5:
 ## CPU and bus
 
 - `8085A` DIP-40
-- `74LS373` or `74HCT373` for AD0-AD7 latch
-- `74LS245` or `74HCT245` for data bus buffering
+- `74LS373` for AD0-AD7 latch
+- `74LS245` for data bus buffering
 - `74LS138` for decode
 - `74LS00` and `74LS04` for glue logic
 
@@ -206,7 +206,7 @@ Rationale:
 
 Use one of these:
 
-1. `74LS164` or `74HC164` pseudo-random LFSR
+1. `74LS164` pseudo-random LFSR
 2. `74LS93` plus XOR feedback
 3. noise source plus Schmitt trigger if later needed
 
@@ -216,7 +216,7 @@ Recommendation:
 
 ## Bench I/O
 
-- `74LS273` or `74HCT273` latch for LED output register
+- `74LS273` latch for LED output register
 - DIP switch packs for `ENVL` and `ENVH`
 - LED bar or discrete LEDs for `ACTL` and debug signals
 
@@ -264,8 +264,8 @@ Recommendation:
 | Item | Qty | Notes |
 |---|---:|---|
 | `8085A` DIP-40 | 1 | CPU |
-| `74LS373` or `74HCT373` DIP-20 | 1 | multiplexed address latch |
-| `74LS245` or `74HCT245` DIP-20 | 1 | data bus transceiver |
+| `74LS373` DIP-20 | 1 | multiplexed address latch |
+| `74LS245` DIP-20 | 1 | data bus transceiver |
 | `74LS138` DIP-16 | 1 | decode |
 | `74LS00` DIP-14 | 1 | glue logic |
 | `74LS04` DIP-14 | 1 | invert/reset shaping |
@@ -293,7 +293,7 @@ Recommendation:
 | `74LS139` DIP-16 | 1 | extra decode |
 | `74LS32` DIP-14 | 1 | decode glue, optional |
 | `74LS00` DIP-14 | 1 | decode glue |
-| `74LS273` or `74HCT273` DIP-20 | 2 | MA low/high latches if using explicit MMA registers |
+| `74LS273` DIP-20 | 2 | MA low/high latches if using explicit MMA registers |
 | `74LS245` DIP-20 | 1 | optional data-path isolation |
 | `0.1uF` ceramic capacitors | 8 | decoupling |
 | `47uF` electrolytic | 1 | board bulk |
@@ -306,8 +306,8 @@ Recommendation:
 
 | Item | Qty | Notes |
 |---|---:|---|
-| `74LS244` or `74HCT244` DIP-20 | 1 | input buffering |
-| `74LS273` or `74HCT273` DIP-20 | 1 | output latch |
+| `74LS244` DIP-20 | 1 | input buffering |
+| `74LS273` DIP-20 | 1 | output latch |
 | `74LS165` or switch-direct input path | 1 | optional switch capture |
 | `74LS164` or `74HC164` DIP-14 | 1 | random/LFSR basis |
 | `74LS86` DIP-14 | 1 | XOR feedback for PRNG |
@@ -350,7 +350,7 @@ These are not required for the first bench validation:
 
 - Use genuine or tested `8085A` parts.
 - Use `LS` TTL where timing compatibility matters.
-- Use `HCT` only where substitution is harmless and availability is better.
+- Use `LS` parts throughout this build; no `HCT` substitutions are planned.
 - Use new-old-stock or modern SRAM in DIP packages to reduce the chip count.
 - Do not optimize for historical purity on the first wire-wrap pass.
 
