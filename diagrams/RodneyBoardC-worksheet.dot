@@ -1,0 +1,44 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad="0.2"
+  ];
+
+  node [shape=plain, fontname="Helvetica"];
+
+  board [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+      <TR>
+        <TD BGCOLOR="#DCE8F5" COLSPAN="5"><B>Board C: Bench I/O Worksheet</B><BR/>Planning grid: X1-X96, Y1-Y40</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#EAF1F8" COLSPAN="5"><B>Top Service Strip</B><BR/>TP1-TP4 on the left, JP1-JP3 on the right, all at Y3</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8"><B>Power Lane</B><BR/>X1-X6</TD>
+        <TD BGCOLOR="#E8F1E7"><B>SW1</B><BR/>ENVL DIP<BR/>X8,Y17</TD>
+        <TD BGCOLOR="#FBE9D0"><B>U1</B><BR/>Input Buffer<BR/>X29,Y17<BR/>DIP-20</TD>
+        <TD BGCOLOR="#FBE9D0"><B>U2</B><BR/>Output Latch<BR/>X49,Y17<BR/>DIP-20</TD>
+        <TD BGCOLOR="#F6E7D8"><B>LED1-LED8</B><BR/>ACTL row<BR/>X73,Y17</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8"><B>Cbulk</B><BR/>X4,Y31</TD>
+        <TD BGCOLOR="#E8F1E7"><B>SW2</B><BR/>ENVH optional<BR/>X8,Y27</TD>
+        <TD BGCOLOR="#EFE3F8"><B>U3</B><BR/>Local Decode<BR/>X29,Y27<BR/>DIP-16</TD>
+        <TD BGCOLOR="#EFE3F8"><B>U4</B><BR/>TSWR LFSR<BR/>X49,Y9<BR/>DIP-14</TD>
+        <TD BGCOLOR="#F6E7D8"><B>LED9-LED16</B><BR/>DBG / ACTH<BR/>X73,Y27</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8">manual access margin</TD>
+        <TD BGCOLOR="#F7F3E8">switch pull-ups</TD>
+        <TD BGCOLOR="#F7F3E8">bus crossing minimized</TD>
+        <TD BGCOLOR="#F7F3E8">service room</TD>
+        <TD BGCOLOR="#EAF1F8"><B>Bus Lane</B><BR/>J1 at X84,Y31<BR/>X87-X96</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#DCE8F5" COLSPAN="5"><B>Bottom Band</B><BR/>Y35-Y40 reserved for connector, power entry, and bus ingress</TD>
+      </TR>
+    </TABLE>
+  >];
+}

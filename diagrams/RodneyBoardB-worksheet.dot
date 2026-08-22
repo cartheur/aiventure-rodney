@@ -1,0 +1,44 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad="0.2"
+  ];
+
+  node [shape=plain, fontname="Helvetica"];
+
+  board [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+      <TR>
+        <TD BGCOLOR="#DCE8F5" COLSPAN="5"><B>Board B: Memory / Decode Worksheet</B><BR/>Planning grid: X1-X96, Y1-Y40</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#EAF1F8" COLSPAN="5"><B>Top Service Strip</B><BR/>TP1-TP8 at Y3 for memory selects, MMA taps, and D0</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8"><B>Power Lane</B><BR/>X1-X6</TD>
+        <TD BGCOLOR="#F7F3E8">clear decode ingress</TD>
+        <TD BGCOLOR="#FBE9D0"><B>U1</B><BR/>62256 Main Memory<BR/>X37,Y10<BR/>DIP-28</TD>
+        <TD BGCOLOR="#F7F3E8">memory data side</TD>
+        <TD BGCOLOR="#EAF1F8"><B>Bus Lane</B><BR/>J1 at X84,Y26<BR/>X87-X96</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8"><B>Cbulk</B><BR/>X4,Y31</TD>
+        <TD BGCOLOR="#EFE3F8"><B>U2 + U3</B><BR/>74LS138 / 74LS139<BR/>X13,Y20 and X24,Y20</TD>
+        <TD BGCOLOR="#F6E7D8"><B>U4 + U5</B><BR/>MMA Low / High<BR/>X48,Y20 and X60,Y20</TD>
+        <TD BGCOLOR="#F6E7D8"><B>U6</B><BR/>MMD Path<BR/>X73,Y20<BR/>DIP-20</TD>
+        <TD BGCOLOR="#F7F3E8">keep right edge probeable</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8">low bus band</TD>
+        <TD BGCOLOR="#E8F1E7"><B>U7</B><BR/>6264 Program RAM<BR/>X12,Y28<BR/>DIP-28</TD>
+        <TD BGCOLOR="#F7F3E8">service gap</TD>
+        <TD BGCOLOR="#E8F1E7"><B>U8</B><BR/>EEPROM / ROM<BR/>X61,Y28<BR/>DIP-28</TD>
+        <TD BGCOLOR="#F7F3E8">lower breakout room</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#DCE8F5" COLSPAN="5"><B>Bottom Band</B><BR/>Y35-Y40 reserved for connector, power entry, and bus ingress</TD>
+      </TR>
+    </TABLE>
+  >];
+}

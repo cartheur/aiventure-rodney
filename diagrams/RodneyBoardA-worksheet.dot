@@ -1,0 +1,37 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad="0.2"
+  ];
+
+  node [shape=plain, fontname="Helvetica"];
+
+  board [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+      <TR>
+        <TD BGCOLOR="#DCE8F5" COLSPAN="5"><B>Board A: CPU / Bus Worksheet</B><BR/>Planning grid: X1-X96, Y1-Y40</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#EAF1F8" COLSPAN="5"><B>Top Service Strip</B><BR/>TP1-TP6 at Y3, Reset at X54,Y8, XTAL at X61,Y8</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8"><B>Power Lane</B><BR/>X1-X6</TD>
+        <TD BGCOLOR="#FBE9D0"><B>U2</B><BR/>74LS373<BR/>X17,Y16<BR/>DIP-20</TD>
+        <TD BGCOLOR="#F6E7D8"><B>U1</B><BR/>8085A<BR/>X39,Y16<BR/>DIP-40</TD>
+        <TD BGCOLOR="#FBE9D0"><B>U3</B><BR/>74LS245<BR/>X70,Y16<BR/>DIP-20</TD>
+        <TD BGCOLOR="#EAF1F8"><B>Bus Lane</B><BR/>J1 at X84,Y26<BR/>X87-X96</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#F7F3E8"><B>Cbulk</B><BR/>X4,Y31</TD>
+        <TD BGCOLOR="#F7F3E8">CPU-Latch gap<BR/>leave wrap access</TD>
+        <TD BGCOLOR="#F7F3E8">Center fan-out zone</TD>
+        <TD BGCOLOR="#EFE3F8"><B>U4</B><BR/>74LS138<BR/>X72,Y24<BR/>DIP-16</TD>
+        <TD BGCOLOR="#E8F1E7"><B>U5</B><BR/>74LS04<BR/>X73,Y8<BR/>DIP-14</TD>
+      </TR>
+      <TR>
+        <TD BGCOLOR="#DCE8F5" COLSPAN="5"><B>Bottom Band</B><BR/>Y35-Y40 reserved for connector, power entry, and board-to-board breakout</TD>
+      </TR>
+    </TABLE>
+  >];
+}

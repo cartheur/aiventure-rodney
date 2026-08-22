@@ -1,0 +1,33 @@
+digraph G {
+  graph [
+    pad="0.3",
+    nodesep="0.6",
+    ranksep="0.8",
+    bgcolor="white"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    color="#263238",
+    fontname="Helvetica",
+    fontsize=12,
+    margin="0.18,0.12"
+  ];
+
+  edge [
+    color="#455A64",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  rankdir=LR;
+
+  A [label="Board A\nCPU / Bus\n\nU1 8085A at X39,Y16\nU2 74LS373 at X17,Y16\nU3 74LS245 at X70,Y16", fillcolor="#E8F1E7"];
+  B [label="Board B\nMemory / Decode\n\nU1 62256 at X37,Y10\nU4/U5 MMA at X48/Y20 and X60/Y20\nU7 6264 at X12,Y28", fillcolor="#FBE9D0"];
+  C [label="Board C\nBench I/O\n\nSW1 ENVL at X8,Y17\nU2 output latch at X49,Y17\nACTL LEDs at X73,Y17", fillcolor="#E7EEF7"];
+
+  A -> B [label="CAB-A-B\nA0-A15, D0-D7,\n/RD, /WR, IO/M,\n/RESET_OUT, +5V, GND"];
+  A -> C [label="CAB-A-C\nA0-A15, D0-D7,\n/RD, /WR, IO/M,\n/RESET_OUT, +5V, GND"];
+}
