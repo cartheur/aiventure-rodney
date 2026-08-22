@@ -10,20 +10,20 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],CPU board,74LS138,DIP-16,1,Board A,coarse decode
 [ ],CPU board,74LS04,DIP-14,1,Board A,clock/reset glue
 [ ],CPU board,74LS00,DIP-14,1,Board A,glue logic
-[ ],CPU board,crystal 5 MHz or 6.144 MHz,2-pin crystal,1,Board A,choose one standard
+[ ],CPU board,crystal 5 MHz,2-pin crystal,1,Board A,"selected standard; already purchased in original parts list"
 [ ],CPU board,22pF crystal load capacitor,"radial / ceramic",2,Board A,if crystal circuit uses them
 [ ],CPU board,reset pushbutton,"panel / PCB switch",1,Board A,top-edge service area
 [ ],CPU board,10k resistor,axial resistor,2,Board A,reset network
 [ ],CPU board,1uF to 10uF capacitor,radial electrolytic,1,Board A,reset timing
 [ ],Memory board,62256 SRAM,DIP-28,1,Board B,"main memory; selected part Alliance AS6C62256-55PIN"
 [ ],Memory board,6264 SRAM,DIP-28,1,Board B,"program RAM; selected part Alliance AS6C6264-55PCN"
-[ ],Memory board,28C16 or 28C64 EEPROM,"DIP-24 or DIP-28",1,Board B,monitor / bootstrap
+[ ],Memory board,AT28C64B-15PU EEPROM,DIP-28,1,Board B,"monitor / bootstrap; selected part"
 [ ],Memory board,74LS138,DIP-16,1,Board B,region decode
 [ ],Memory board,74LS139,DIP-16,1,Board B,subdecode
 [ ],Memory board,74LS273,DIP-20,2,Board B,"MMA low, MMA high"
 [ ],Memory board,74LS245,DIP-20,1,Board B,"MMD path / data isolation"
 [ ],Memory board,74LS00,DIP-14,1,Board B,decode glue
-[ ],Memory board,74LS32,DIP-14,1,Board B,optional decode glue
+[ ],Memory board,74LS32N,DIP-14,1,Board B,"planned decode / glue flexibility; datasheet in repo"
 [ ],I/O board,74LS244,DIP-20,1,Board C,input buffer
 [ ],I/O board,74LS273,DIP-20,1,Board C,output latch
 [ ],I/O board,74LS164,DIP-14,1,Board C,pseudo-random source
@@ -38,8 +38,7 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],Sockets,DIP-20 wire-wrap socket,DIP-20 WW socket,6,"A, B, C","1 + 3 + 2"
 [ ],Sockets,DIP-16 wire-wrap socket,DIP-16 WW socket,3,"A, B","1 + 2"
 [ ],Sockets,DIP-14 wire-wrap socket,DIP-14 WW socket,5,"A, B, C","2 + 2 + 1"
-[ ],Sockets,DIP-28 ZIF socket,DIP-28 ZIF,3,Board B,"plugs into soldered DIP-28 machine-pin WW sockets at U1, U7, U8"
-[ ],Sockets,DIP-40 ZIF socket,DIP-40 ZIF,0 to 1,Board A,optional for 8085A swap testing
+[ ],Sockets,DIP-28 ZIF socket,DIP-28 ZIF,3 required,Board B,"plugs into soldered DIP-28 machine-pin WW sockets at U1, U7, and U8; 1 spare recommended"
 [ ],Passive,0.1uF ceramic decoupling capacitor,"radial / ceramic",17,all boards,one per IC minimum
 [ ],Passive,bulk electrolytic 47uF to 470uF,radial electrolytic,3,"A, B, C",one per board
 [ ],Passive,extra 10k resistors,axial resistor,8,general,"pull-ups, glue, spare"
@@ -60,3 +59,13 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],Tools,logic probe,bench tool,1,debug,recommended
 [ ],Tools,oscilloscope,bench instrument,1,debug,recommended
 [stock],Future variant,BPA08B side-actuated DIP switch,"DIP switch, 8-pos",2,future variants,"held for possible miniaturized or side-access builds; not for current Rodney Board C"
+[note],Memory expansion,baseline program-memory plan,current population,current,Board B,"U7 = 6264 program RAM, U8 = AT28C64B-15PU EEPROM / monitor, direct-mapped program RAM at 0000h-1FFFh"
+[note],Memory expansion,alternate U8 population,DIP-28 memory site,optional,Board B,"U8 may be populated with a second 6264 instead of EEPROM for direct dual-program-RAM experiments"
+[stock],Memory expansion,spare 6264 SRAM,DIP-28,1 to 2 extra,Board B variants,"recommended future stock for alternate U7/U8 population experiments"
+[stock],Memory expansion,spare DIP-28 wire-wrap socket,DIP-28 WW socket,1 to 2 extra,Board B variants,"keeps U8 or future rework flexible for alternate RAM/ROM population"
+[stock],Memory expansion,spare DIP-28 ZIF socket,DIP-28 ZIF,1 extra,Board B variants,"recommended spare so total purchase can be 4 while current build still uses 3"
+[stock],Memory expansion,jumper or header strap hardware,0.1 inch header / shunt,1 small pack,decode experiments,"useful for alternate chip-select routing or future bank-select experiments"
+[stock],Decision experiments,74LS85 magnitude comparator,10 planned,4-bit wonder path,future experiments,"purchase planned; candidate future part if testing shows value in hardware compare, threshold, ranking, or branch-support logic"
+[note],Memory expansion,bank-switched program RAM,later experiment,later,design option,"possible future path if multiple program-RAM images are desired without consuming additional direct address regions"
+[note],Memory expansion,256K-class memory reserve,future stock,optional,future experiments,"keep some 256K-class memory devices in reserve if GAMMA-1 success leads toward DELTA-1 or heavier learned-state / environment-model experiments"
+[note],Memory expansion,design impact,planning note,n/a,Board B,"second directly addressed program RAM is a modest decode and wiring change; a true fourth memory site would require a future board-layout revision"

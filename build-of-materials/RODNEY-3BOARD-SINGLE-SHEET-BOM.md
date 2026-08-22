@@ -34,20 +34,20 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | CPU board | `74LS138` | `DIP-16` | 1 | Board A | coarse decode |
 | `[ ]` | CPU board | `74LS04` | `DIP-14` | 1 | Board A | clock/reset glue |
 | `[ ]` | CPU board | `74LS00` | `DIP-14` | 1 | Board A | glue logic |
-| `[ ]` | CPU board | crystal `5 MHz` or `6.144 MHz` | `2-pin crystal` | 1 | Board A | choose one standard |
+| `[ ]` | CPU board | crystal `5 MHz` | `2-pin crystal` | 1 | Board A | selected standard; already purchased in original parts list |
 | `[ ]` | CPU board | crystal load capacitors `22pF` | `radial / ceramic` | 2 | Board A | if crystal circuit uses them |
 | `[ ]` | CPU board | reset pushbutton | `panel / PCB switch` | 1 | Board A | top-edge service area |
 | `[ ]` | CPU board | `10k` resistor | `axial resistor` | 2 | Board A | reset network |
 | `[ ]` | CPU board | `1uF` to `10uF` capacitor | `radial electrolytic` | 1 | Board A | reset timing |
-| `[ ]` | Memory board | `62256` SRAM | `DIP-28` | 1 | Board B | main memory; selected part: `Alliance AS6C62256-55PIN`, see [Alliance datasheet](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/datasheets/alliance/AS6C62256_23_March_2016_rev1.2.pdf:1) |
-| `[ ]` | Memory board | `6264` SRAM | `DIP-28` | 1 | Board B | program RAM; selected part: `Alliance AS6C6264-55PCN`, see [Alliance datasheet](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/datasheets/alliance/Alliance_Memory_64K_AS6C6264v2.0July2017.pdf:1) |
-| `[ ]` | Memory board | `28C16` or `28C64` EEPROM | `DIP-24 or DIP-28` | 1 | Board B | monitor / bootstrap |
+| `[ ]` | Memory board | `62256` SRAM | `DIP-28` | 1 | Board B | main memory; selected part: `Alliance AS6C62256-55PIN` |
+| `[ ]` | Memory board | `6264` SRAM | `DIP-28` | 1 | Board B | program RAM; selected part: `Alliance AS6C6264-55PCN` |
+| `[ ]` | Memory board | `AT28C64B-15PU` EEPROM | `DIP-28` | 1 | Board B | monitor / bootstrap; selected part |
 | `[ ]` | Memory board | `74LS138` | `DIP-16` | 1 | Board B | region decode |
 | `[ ]` | Memory board | `74LS139` | `DIP-16` | 1 | Board B | subdecode |
 | `[ ]` | Memory board | `74LS273` | `DIP-20` | 2 | Board B | `MMA low`, `MMA high` |
 | `[ ]` | Memory board | `74LS245` | `DIP-20` | 1 | Board B | `MMD` path / data isolation |
 | `[ ]` | Memory board | `74LS00` | `DIP-14` | 1 | Board B | decode glue |
-| `[ ]` | Memory board | `74LS32` | `DIP-14` | 1 | Board B | optional decode glue |
+| `[ ]` | Memory board | `74LS32N` | `DIP-14` | 1 | Board B | planned decode / glue flexibility; datasheet in repo |
 | `[ ]` | I/O board | `74LS244` | `DIP-20` | 1 | Board C | input buffer |
 | `[ ]` | I/O board | `74LS273` | `DIP-20` | 1 | Board C | output latch |
 | `[ ]` | I/O board | `74LS164` | `DIP-14` | 1 | Board C | pseudo-random source |
@@ -62,8 +62,7 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | Sockets | DIP-20 wire-wrap socket | `DIP-20 WW socket` | 6 | A, B, C | `1 + 3 + 2` |
 | `[ ]` | Sockets | DIP-16 wire-wrap socket | `DIP-16 WW socket` | 3 | A, B | `1 + 2` |
 | `[ ]` | Sockets | DIP-14 wire-wrap socket | `DIP-14 WW socket` | 5 | A, B, C | `2 + 2 + 1` |
-| `[ ]` | Sockets | DIP-28 ZIF socket | `DIP-28 ZIF` | 3 | Board B | plugs into soldered DIP-28 machine-pin WW sockets at `U1`, `U7`, `U8` |
-| `[ ]` | Sockets | DIP-40 ZIF socket | `DIP-40 ZIF` | 0 to 1 | Board A | optional for `8085A` swap testing |
+| `[ ]` | Sockets | DIP-28 ZIF socket | `DIP-28 ZIF` | 3 required | Board B | plugs into soldered DIP-28 machine-pin WW sockets at `U1`, `U7`, and `U8`; `1` spare recommended |
 | `[ ]` | Passive | `0.1uF` ceramic decoupling capacitors | `radial / ceramic` | 17 | all boards | one per IC minimum |
 | `[ ]` | Passive | bulk electrolytic `47uF` to `470uF` | `radial electrolytic` | 3 | A, B, C | one per board |
 | `[ ]` | Passive | extra `10k` resistors | `axial resistor` | 8 | general | pull-ups, glue, spare |
@@ -87,17 +86,35 @@ Use this as the bench checklist for whether we have everything needed to start p
 
 ## Quick Totals
 
+Baseline first-pass build:
+
 | Type | Qty |
 |---|---:|
 | Boards | 3 |
 | Edge connectors | 2 |
-| ICs on sockets | 18 to 19 |
+| ICs on sockets | 19 to 20 |
 | Wire-wrap sockets total | 18 |
+| DIP-28 memory devices populated | 3 |
 | Top-edge test posts minimum | 18 |
 | LEDs | 16 |
 | DIP switch packs | 2 |
 | Bulk capacitors | 3 |
 | `0.1uF` decouplers minimum | 17 |
+
+Expansion-oriented stock guidance:
+
+| Type | Qty |
+|---|---:|
+| Spare `6264` devices to keep on hand | 1 to 2 |
+| Total `6264` devices including baseline | 2 to 3 |
+| Total DIP-28 memory devices on hand including baseline and spare `6264`s | 4 to 5 |
+| Spare DIP-28 wire-wrap sockets | 1 to 2 |
+| Spare DIP-28 ZIF sockets | 1 recommended |
+
+Counting note:
+
+- baseline `19` assumes the `74LS32N` position is left unpopulated
+- baseline `20` assumes that `74LS32N` is populated
 
 ## Recommended Swap-Isolation Targets
 
@@ -105,13 +122,12 @@ If you want to reserve ZIF capability without overcomplicating the build, priori
 
 1. `Board B U8` EEPROM / monitor ROM
 2. `Board B U7` `6264` program RAM
-3. `Board A U1` `8085A`, only if you expect to try multiple CPUs
-4. `Board B U1` `62256` only if you plan active learned-memory experiments with multiple SRAMs
+3. `Board B U1` `62256` only if you plan active learned-memory experiments with multiple SRAMs
 
 For the current plan, we are reserving:
 
 - `3 x DIP-28 ZIF` on Board B for `U1`, `U7`, and `U8`
-- skip `DIP-40 ZIF` unless CPU swapping is a real expectation
+- `1` additional spare `DIP-28 ZIF` is recommended for purchasing convenience and replacement margin
 
 Board B placement note:
 
@@ -124,7 +140,6 @@ Board B placement note:
 - The repo already references the key board family and several compatible parts in [build-of-materials/Parts-List.csv](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/Parts-List.csv:1) and [build-of-materials/BOM_Rodney.csv](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/BOM_Rodney.csv:1), but those lists mix original-machine parts with this newer 3-board plan.
 - This sheet is meant to be the simplified current-build target list.
 - For the `2-connector` build, `Board C` is the best hard-wired candidate because it is the least likely board to need repeated removal during CPU and memory bring-up.
-- The one part family still worth deciding explicitly before ordering is the exact EEPROM package width, because that can affect whether you want a DIP-24 or DIP-28 socket in Board B.
 - Current bench-power plan is a `+5V` USB battery with `2` HP `5004A` signature-analyzer style clips landing on board power-input pins; verify stable `5V` under load and keep a solid common ground before CPU bring-up.
 
 ## Selected Memory Part
@@ -145,6 +160,14 @@ Current selected `U1` main memory:
 - industrial temp grade `-40C to +85C`
 - direct fit for the current `Board B U1` footprint and `28-pin ZIF` plan
 
+Current selected `U8` monitor EEPROM:
+
+- `AT28C64B-15PU`
+- `8K x 8`
+- `DIP-28` PDIP
+- selected as the current EEPROM purchase part for monitor / bootstrap use
+- direct fit for the current `Board B U8` footprint and `28-pin ZIF` plan
+
 Current selected `SW1` and `SW2` input switches:
 
 - `CTS 195-8MST`
@@ -159,6 +182,50 @@ Future variant stock:
 - `2 x BPA08B`
 - retained as stock for possible future miniaturized or side-access board variants
 - not planned for the current `Board C` Rodney build
+
+Forward-looking memory note:
+
+- EEPROM datasheet support has been added to this BoM workflow for the current monitor / bootstrap path.
+- Keep some additional `256K`-class memory devices in reserve as future stock, not as a current required build item.
+- Rationale: if `GAMMA-1` succeeds and the project grows into heavier learned-state or `DELTA-1` experimental work, we may want more memory headroom while we refine how Rodney's environment model interacts with the machine-intelligence scheme.
+
+## Memory Expansion Options
+
+This BoM is still centered on the current first-pass configuration, but we should scope purchases broadly enough to support nearby memory experiments without reworking the ordering list.
+
+Current baseline:
+
+- `U7` populated as `1 x 6264` program RAM
+- `U8` populated as `1 x AT28C64B-15PU` EEPROM / monitor device
+- direct-mapped program RAM at `0000h-1FFFh`
+
+Supported alternate population paths:
+
+- populate `U8` with a second `6264` instead of EEPROM if we want `2 x` directly addressed program RAM regions
+- keep `U8` as EEPROM and retain the current balanced bring-up path of RAM plus monitor / bootstrap
+- reserve bank-switched program-RAM experiments as a later option if we want multiple RAM images without consuming additional address regions
+
+BoM scoping guidance:
+
+- keep the current required quantities unchanged for the first build
+- stock at least `1-2` extra `6264` devices for alternate `U7` / `U8` experiments
+- stock spare `DIP-28` wire-wrap sockets and `DIP-28 ZIF` sockets so `U8` can remain a flexible memory site
+- keep a small amount of jumper, header, or strap hardware on hand for alternate chip-select routing or bank-select experiments
+
+Design impact note:
+
+- adding a second directly addressed program RAM device is a modest decode and wiring change, not a full architecture change
+- the larger constraint is physical socket allocation on `Board B`, because the current memory plan centers on `U1` main memory, `U7` program RAM, and `U8` EEPROM / ROM
+- a true fourth memory site would be a future board-layout revision rather than a first-pass BoM requirement
+
+Bank-switched program RAM note:
+
+- one possible later scheme is to keep the CPU-visible program window at `0000h-1FFFh` and select between two physical RAM banks with a bank-select bit
+- practical implementation: qualify `/PRG_RAM_CS` with one extra bank-select stage so only one RAM device is enabled at a time
+- likely control methods: jumper-select for coarse experiments, or a latch / memory-mapped control bit for software-controlled bank switching
+- likely extra parts: small jumper/header stock, one latch or flip-flop device if software-controlled selection is desired, and a small amount of extra glue logic
+- main software caution: do not switch away from the currently executing bank unless the switching routine lives in EEPROM / monitor ROM or another always-visible code region
+- recommendation: treat bank switching as a second-phase experiment after first-pass direct-mapped bring-up is stable
 
 Recommended ROM programmer:
 
