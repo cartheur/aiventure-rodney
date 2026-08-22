@@ -1,0 +1,51 @@
+
+digraph G {
+  graph [
+    pad="0.3",
+    nodesep="0.35",
+    ranksep="0.5",
+    splines=true,
+    bgcolor="white"
+  ];
+  node [
+    shape=box,
+    style="rounded,filled",
+    color="#263238",
+    fillcolor="#F7F3E8",
+    fontname="Helvetica",
+    fontsize=11,
+    margin="0.12,0.08"
+  ];
+  edge [
+    color="#455A64",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  rankdir=TB;
+
+  node [shape=record];
+
+  Top [label="Top Edge\nMemory Test Points", fillcolor="#E7EEF7"];
+  Main [label="62256\nMain Memory", fillcolor="#FBE9D0"];
+  Dec [label="Decode\n74LS138 / 74LS139", fillcolor="#EFE3F8"];
+  MMA [label="MMA Latches\nLow / High", fillcolor="#F6E7D8"];
+  MMD [label="MMD Path", fillcolor="#F6E7D8"];
+  PRG [label="6264\nProgram RAM", fillcolor="#E8F1E7"];
+  ROM [label="EEPROM /\nMonitor ROM", fillcolor="#E8F1E7"];
+  Power [label="Power Bulk\n+5V / GND lane", fillcolor="#F7F3E8"];
+  BottomEdgeB [label="Bottom Edge\nConnector / Bus In", fillcolor="#E7EEF7"];
+
+  Top -> Main;
+  BottomEdgeB -> Dec;
+  Dec -> PRG;
+  Dec -> ROM;
+  Dec -> MMA;
+  MMA -> Main;
+  MMD -> Main;
+  PRG -> BottomEdgeB;
+  ROM -> BottomEdgeB;
+  Main -> BottomEdgeB;
+  Power -> Main;
+}

@@ -1,0 +1,42 @@
+
+digraph G {
+  graph [
+    pad="0.3",
+    nodesep="0.35",
+    ranksep="0.5",
+    splines=true,
+    bgcolor="white"
+  ];
+  node [
+    shape=box,
+    style="rounded,filled",
+    color="#263238",
+    fillcolor="#F7F3E8",
+    fontname="Helvetica",
+    fontsize=11,
+    margin="0.12,0.08"
+  ];
+  edge [
+    color="#455A64",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  rankdir=LR;
+
+  ENVL [label="ENVL\nSwitches / Sensors", fillcolor="#E8F1E7"];
+  CPU [label="8085A\nBeta / Gamma Runtime", fillcolor="#FBE9D0"];
+  MMA [label="MMA Low / High\nIndirect Address", fillcolor="#F6E7D8"];
+  MEM [label="Main Memory\nLearned State Table", fillcolor="#EFE3F8"];
+  MMD [label="MMD\nData Path", fillcolor="#E7EEF7"];
+  ACTL [label="ACTL\nAction Output", fillcolor="#F7D9D9"];
+
+  ENVL -> CPU [label="current state"];
+  CPU -> MMA [label="select entry"];
+  MMA -> MEM [label="address"];
+  MEM -> MMD [label="learned byte"];
+  MMD -> CPU [label="read / write"];
+  CPU -> ACTL [label="response nibble"];
+  CPU -> MMD [label="store\nresponse/confidence"];
+}

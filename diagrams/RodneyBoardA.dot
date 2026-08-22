@@ -1,0 +1,52 @@
+
+digraph G {
+  graph [
+    pad="0.3",
+    nodesep="0.35",
+    ranksep="0.5",
+    splines=true,
+    bgcolor="white"
+  ];
+  node [
+    shape=box,
+    style="rounded,filled",
+    color="#263238",
+    fillcolor="#F7F3E8",
+    fontname="Helvetica",
+    fontsize=11,
+    margin="0.12,0.08"
+  ];
+  edge [
+    color="#455A64",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  rankdir=TB;
+
+  node [shape=record];
+
+  Top [label="Top Edge\nTest Points / Reset", fillcolor="#E7EEF7"];
+  Clock [label="Clock / Reset\nXTAL, 74LS04", fillcolor="#E8F1E7"];
+  Latch [label="Address Latch\n74LS373", fillcolor="#FBE9D0"];
+  CPU [label="8085A CPU", fillcolor="#F6E7D8"];
+  Buffer [label="Data Buffer\n74LS245", fillcolor="#FBE9D0"];
+  Decode [label="Coarse Decode\n74LS138", fillcolor="#EFE3F8"];
+  Power [label="Power Bulk\n+5V / GND lane", fillcolor="#F7F3E8"];
+  BottomEdgeA [label="Bottom Edge\nConnector / Bus Out", fillcolor="#E7EEF7"];
+
+  Top -> Clock;
+  Top -> Latch;
+  Top -> CPU;
+  Top -> Buffer;
+  Top -> Decode;
+  Clock -> CPU;
+  Latch -> CPU;
+  CPU -> Buffer;
+  CPU -> Decode;
+  Power -> CPU;
+  CPU -> BottomEdgeA;
+  Buffer -> BottomEdgeA;
+  Decode -> BottomEdgeA;
+}

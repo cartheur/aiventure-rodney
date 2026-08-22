@@ -1,0 +1,54 @@
+
+digraph G {
+  graph [
+    pad="0.3",
+    nodesep="0.35",
+    ranksep="0.5",
+    splines=true,
+    bgcolor="white"
+  ];
+  node [
+    shape=box,
+    style="rounded,filled",
+    color="#263238",
+    fillcolor="#F7F3E8",
+    fontname="Helvetica",
+    fontsize=11,
+    margin="0.12,0.08"
+  ];
+  edge [
+    color="#455A64",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  rankdir=TB;
+
+  node [shape=record];
+
+  Top [label="Top Edge\nI/O Test Points / Jumpers", fillcolor="#E7EEF7"];
+  TSWR [label="TSWR\nLFSR / Random", fillcolor="#EFE3F8"];
+  ENVL [label="ENVL DIP\nSwitches", fillcolor="#E8F1E7"];
+  ENVH [label="ENVH DIP\nOptional", fillcolor="#E8F1E7"];
+  INBUF [label="Input Buffer", fillcolor="#FBE9D0"];
+  OUTLAT [label="Output Latch", fillcolor="#FBE9D0"];
+  ACTL [label="ACTL LEDs", fillcolor="#F6E7D8"];
+  ACTH [label="ACTH LEDs\nOptional", fillcolor="#F6E7D8"];
+  Dec [label="Local Decode", fillcolor="#EFE3F8"];
+  Power [label="Power Bulk\n+5V / GND lane", fillcolor="#F7F3E8"];
+  BottomEdgeC [label="Bottom Edge\nConnector / Bus In", fillcolor="#E7EEF7"];
+
+  Top -> TSWR;
+  Top -> ENVL;
+  Top -> ENVH;
+  ENVL -> INBUF;
+  ENVH -> INBUF;
+  TSWR -> INBUF;
+  BottomEdgeC -> Dec;
+  Dec -> INBUF;
+  Dec -> OUTLAT;
+  OUTLAT -> ACTL;
+  OUTLAT -> ACTH;
+  Power -> OUTLAT;
+}
