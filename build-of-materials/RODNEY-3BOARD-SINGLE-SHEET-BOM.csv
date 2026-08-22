@@ -53,6 +53,7 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],Mechanical,labels or masking tape flags,consumable,1 pack,build aid,"cable and signal marking"
 [ ],Power,+5V USB battery supply,USB power bank,1,bring-up,selected bench source for first logic bring-up
 [ ],Power,HP 5004A signature-analyzer clip leads,"grabber / clip lead",2,bring-up,used to clip +5V and GND onto board input pins
+[ ],Tools,Batronix BX32P Barlino II programmer,"USB EPROM / EEPROM programmer",1 optional,ROM programming,"recommended for planned 28C EEPROMs and likely compatible with older ST MC27C128 EPROM parts"
 [ ],Tools,wire-wrap tool,hand tool,1,build,manual or powered
 [ ],Tools,unwrap tool,hand tool,1,build,strongly recommended
 [ ],Tools,soldering iron,bench tool,1,build,"connectors, headers"

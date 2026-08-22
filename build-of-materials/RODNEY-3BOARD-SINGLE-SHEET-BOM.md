@@ -78,6 +78,7 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | Power | `+5V` USB battery supply | `USB power bank` | 1 | bring-up | selected bench source for first logic bring-up |
 | `[ ]` | Power | HP `5004A` signature-analyzer clip leads | `grabber / clip lead` | 2 | bring-up | used to clip `+5V` and `GND` onto board input pins |
 | `[ ]` | Power | wall-powered `+5V` bench supply | `bench supply` | 1 optional | fallback | use only if the USB source shows droop or unstable behavior |
+| `[ ]` | Tools | `Batronix BX32P Barlino II` programmer | `USB EPROM / EEPROM programmer` | 1 optional | ROM programming | recommended programmer for planned `28C` EEPROMs and likely compatible with older `ST MC27C128` EPROM parts |
 | `[ ]` | Tools | wire-wrap tool | `hand tool` | 1 | build | manual or powered |
 | `[ ]` | Tools | unwrap tool | `hand tool` | 1 | build | strongly recommended |
 | `[ ]` | Tools | soldering iron | `bench tool` | 1 | build | connectors, headers |
@@ -158,3 +159,10 @@ Future variant stock:
 - `2 x BPA08B`
 - retained as stock for possible future miniaturized or side-access board variants
 - not planned for the current `Board C` Rodney build
+
+Recommended ROM programmer:
+
+- `Batronix BX32P Barlino II`
+- suitable for `28C` parallel EEPROM workflow
+- likely suitable for the older `ST MC27C128` EPROM already on hand
+- lets us support either the EEPROM or EPROM `U8` path with one tool class
