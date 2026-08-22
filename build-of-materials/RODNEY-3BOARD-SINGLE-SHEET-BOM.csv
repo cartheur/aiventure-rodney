@@ -55,7 +55,7 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],Tools,Batronix BX32P Barlino II programmer,"USB EPROM / EEPROM programmer",1 optional,ROM programming,"recommended for planned 28C EEPROMs and likely compatible with older ST MC27C128 EPROM parts"
 [ ],Tools,wire-wrap tool,hand tool,1,build,manual or powered
 [ ],Tools,unwrap tool,hand tool,1,build,strongly recommended
-[ ],Tools,soldering iron,bench tool,1,build,"connectors, headers"
+[ ],Tools,Weller soldering iron,bench tool,1,build,"connectors, headers"
 [ ],Tools,logic probe,bench tool,1,debug,recommended
 [ ],Tools,oscilloscope,bench instrument,1,debug,recommended
 [stock],Future variant,BPA08B side-actuated DIP switch,"DIP switch, 8-pos",2,future variants,"held for possible miniaturized or side-access builds; not for current Rodney Board C"

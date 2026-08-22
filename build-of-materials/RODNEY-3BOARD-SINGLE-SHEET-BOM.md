@@ -80,7 +80,7 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | Tools | `Batronix BX32P Barlino II` programmer | `USB EPROM / EEPROM programmer` | 1 optional | ROM programming | recommended programmer for planned `28C` EEPROMs and likely compatible with older `ST MC27C128` EPROM parts |
 | `[ ]` | Tools | wire-wrap tool | `hand tool` | 1 | build | manual or powered |
 | `[ ]` | Tools | unwrap tool | `hand tool` | 1 | build | strongly recommended |
-| `[ ]` | Tools | soldering iron | `bench tool` | 1 | build | connectors, headers |
+| `[ ]` | Tools | `Weller` soldering iron | `bench tool` | 1 | build | connectors, headers |
 | `[ ]` | Tools | logic probe | `bench tool` | 1 | debug | recommended |
 | `[ ]` | Tools | oscilloscope | `bench instrument` | 1 | debug | recommended |
 

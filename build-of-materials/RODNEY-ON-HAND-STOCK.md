@@ -34,6 +34,7 @@ Last updated: `2026-08-22`
 | I/O board | pseudo-random source | `74LS164` | 1 | 10 planned | 9 planned spare | baseline shift-register part for the Board C pseudo-random source |
 | I/O board | XOR feedback | `74LS86` | 1 | 10 planned | 9 planned spare | baseline part for the pseudo-random source on Board C |
 | I/O board | DIP switch | `CTS 195-8MST` | 2 | 10 planned | 8 planned spare | `SW1`, `SW2`; strong margin for alternates and rework |
+| Tools | soldering iron | `Weller` | 1 | in stock |  | primary soldering iron for the Rodney build |
 
 ## Expansion-Oriented Stock
 
