@@ -193,6 +193,7 @@ Rationale:
 - `6264` SRAM, `8 KB x 8`, for program RAM
   - selected first-pass part: `Alliance AS6C6264-55PCN`, `DIP-28`, `55ns`
 - `62256` SRAM, `32 KB x 8`, for main memory
+  - selected first-pass part: `Alliance AS6C62256-55PIN`, `DIP-28`, `55ns`
 - `28C16` or `28C64` EEPROM for bootstrap or monitor ROM
 
 Rationale:

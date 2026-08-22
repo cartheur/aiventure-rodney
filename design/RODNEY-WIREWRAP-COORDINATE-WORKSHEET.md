@@ -89,7 +89,7 @@ Role: program RAM, monitor ROM, learned-state memory, decode, MMA/MMD path.
 
 | Ref | Function | Package | Pin-1 origin | Orientation | Notes |
 |---|---|---|---|---|---|
-| `U1` | `62256` main memory | DIP-28 wide | `X37, Y10` | `E-W` | dominant board feature |
+| `U1` | `62256` main memory | DIP-28 wide | `X37, Y10` | `E-W` | selected part `Alliance AS6C62256-55PIN`; dominant board feature |
 | `U2` | `74LS138` region decode | DIP-16 narrow | `X13, Y20` | `E-W` | close to bus ingress |
 | `U3` | `74LS139` subdecode | DIP-16 narrow | `X24, Y20` | `E-W` | pairs with `U2` |
 | `U4` | MMA low latch | DIP-20 narrow | `X48, Y20` | `E-W` | close to lower memory address side |

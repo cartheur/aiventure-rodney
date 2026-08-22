@@ -39,7 +39,7 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | CPU board | reset pushbutton | `panel / PCB switch` | 1 | Board A | top-edge service area |
 | `[ ]` | CPU board | `10k` resistor | `axial resistor` | 2 | Board A | reset network |
 | `[ ]` | CPU board | `1uF` to `10uF` capacitor | `radial electrolytic` | 1 | Board A | reset timing |
-| `[ ]` | Memory board | `62256` SRAM | `DIP-28` | 1 | Board B | main memory |
+| `[ ]` | Memory board | `62256` SRAM | `DIP-28` | 1 | Board B | main memory; selected part: `Alliance AS6C62256-55PIN`, see [Alliance datasheet](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/datasheets/alliance/AS6C62256_23_March_2016_rev1.2.pdf:1) |
 | `[ ]` | Memory board | `6264` SRAM | `DIP-28` | 1 | Board B | program RAM; selected part: `Alliance AS6C6264-55PCN`, see [Alliance datasheet](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/datasheets/alliance/Alliance_Memory_64K_AS6C6264v2.0July2017.pdf:1) |
 | `[ ]` | Memory board | `28C16` or `28C64` EEPROM | `DIP-24 or DIP-28` | 1 | Board B | monitor / bootstrap |
 | `[ ]` | Memory board | `74LS138` | `DIP-16` | 1 | Board B | region decode |
@@ -132,3 +132,11 @@ Current selected `U7` program RAM:
 - `DIP-28` PDIP
 - commercial temp grade `0C to 70C`
 - preferred over `AS6C6264-55PIN` because the industrial-temperature variant costs about `EUR 5` more per device without adding useful value for the current bench build
+
+Current selected `U1` main memory:
+
+- `Alliance AS6C62256-55PIN`
+- `32K x 8`
+- `DIP-28` PDIP
+- industrial temp grade `-40C to +85C`
+- direct fit for the current `Board B U1` footprint and `28-pin ZIF` plan

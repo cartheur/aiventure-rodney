@@ -15,7 +15,7 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],CPU board,reset pushbutton,"panel / PCB switch",1,Board A,top-edge service area
 [ ],CPU board,10k resistor,axial resistor,2,Board A,reset network
 [ ],CPU board,1uF to 10uF capacitor,radial electrolytic,1,Board A,reset timing
-[ ],Memory board,62256 SRAM,DIP-28,1,Board B,main memory
+[ ],Memory board,62256 SRAM,DIP-28,1,Board B,"main memory; selected part Alliance AS6C62256-55PIN"
 [ ],Memory board,6264 SRAM,DIP-28,1,Board B,"program RAM; selected part Alliance AS6C6264-55PCN"
 [ ],Memory board,28C16 or 28C64 EEPROM,"DIP-24 or DIP-28",1,Board B,monitor / bootstrap
 [ ],Memory board,74LS138,DIP-16,1,Board B,region decode
