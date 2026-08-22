@@ -1,0 +1,34 @@
+
+digraph G {
+  graph [
+    pad="0.3",
+    nodesep="0.35",
+    ranksep="0.5",
+    splines=true,
+    bgcolor="white"
+  ];
+  node [
+    shape=box,
+    style="rounded,filled",
+    color="#263238",
+    fillcolor="#F7F3E8",
+    fontname="Helvetica",
+    fontsize=11,
+    margin="0.12,0.08"
+  ];
+  edge [
+    color="#455A64",
+    fontname="Helvetica",
+    fontsize=10,
+    arrowsize=0.7
+  ];
+
+  rankdir=LR;
+
+  CPU [label="Board A\nCPU / Bus", fillcolor="#E8F1E7"];
+  MEM [label="Board B\nMemory / Decode", fillcolor="#FBE9D0"];
+  IO [label="Board C\nBench I/O", fillcolor="#E7EEF7"];
+
+  CPU -> MEM [label="A0-A15\nD0-D7\nRD WR IO/M"];
+  CPU -> IO [label="A0-A15\nD0-D7\nRD WR IO/M"];
+}
