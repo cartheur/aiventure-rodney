@@ -37,127 +37,122 @@ digraph G {
 
 
 DIAGRAMS = {
-    "EmbodiedBehaviors": COMMON + r'''
+    "RodneyWirewrapStack": COMMON + r'''
   rankdir=LR;
 
-  Boot [label="Boot /\nSafe Pose", fillcolor="#E8F1E7"];
-  Sense [label="Sense /\nDecide", fillcolor="#FBE9D0"];
-  Action [label="Action\nLoop", fillcolor="#F6E7D8"];
-  Sync [label="Synchronize", fillcolor="#E7EEF7"];
-  Recover [label="Recover", fillcolor="#F7D9D9"];
-  Specialize [label="Task-Specific\nExtension", fillcolor="#EFE3F8"];
+  CPU [label="Board A\nCPU / Bus", fillcolor="#E8F1E7"];
+  MEM [label="Board B\nMemory / Decode", fillcolor="#FBE9D0"];
+  IO [label="Board C\nBench I/O", fillcolor="#E7EEF7"];
 
-  Boot -> Sense;
-  Sense -> Action [label="continue"];
-  Action -> Sync;
-  Sync -> Sense [label="reevaluate"];
-  Sense -> Recover [label="fall / fault"];
-  Recover -> Boot [label="restore"];
-  Sense -> Specialize [label="ball, obstacle,\ncontact, expression"];
-  Specialize -> Sync [label="return"];
+  CPU -> MEM [label="A0-A15\nD0-D7\nRD WR IO/M"];
+  CPU -> IO [label="A0-A15\nD0-D7\nRD WR IO/M"];
 }
 ''',
-    "CTracking": COMMON + r'''
+    "RodneyBoardA": COMMON + r'''
   rankdir=TB;
 
-  Start [label="Start"];
-  Track [label="C-Tracking\nActivate Tracking", fillcolor="#FBE9D0"];
-  Stop [label="Quit /\nHand Back Control", fillcolor="#E7EEF7"];
+  node [shape=record];
 
-  Start -> Track;
-  Track -> Stop [label="done"];
+  Top [label="Top Edge\nTest Points / Reset", fillcolor="#E7EEF7"];
+  Clock [label="Clock / Reset\nXTAL, 74LS04", fillcolor="#E8F1E7"];
+  Latch [label="Address Latch\n74LS373", fillcolor="#FBE9D0"];
+  CPU [label="8085A CPU", fillcolor="#F6E7D8"];
+  Buffer [label="Data Buffer\n74LS245", fillcolor="#FBE9D0"];
+  Decode [label="Coarse Decode\n74LS138", fillcolor="#EFE3F8"];
+  Power [label="Power Bulk\n+5V / GND lane", fillcolor="#F7F3E8"];
+  BottomEdgeA [label="Bottom Edge\nConnector / Bus Out", fillcolor="#E7EEF7"];
+
+  Top -> Clock;
+  Top -> Latch;
+  Top -> CPU;
+  Top -> Buffer;
+  Top -> Decode;
+  Clock -> CPU;
+  Latch -> CPU;
+  CPU -> Buffer;
+  CPU -> Decode;
+  Power -> CPU;
+  CPU -> BottomEdgeA;
+  Buffer -> BottomEdgeA;
+  Decode -> BottomEdgeA;
 }
 ''',
-    "BootSafePose": COMMON + r'''
+    "RodneyBoardB": COMMON + r'''
   rankdir=TB;
 
-  Boot [label="Boot", fillcolor="#E8F1E7"];
-  Pose [label="Boot /\nSafe Pose", fillcolor="#E8F1E7"];
-  Listen [label="Resume\nListener", fillcolor="#E7EEF7"];
-  Main [label="MainLoop\nReady State", fillcolor="#FBE9D0"];
+  node [shape=record];
 
-  Boot -> Pose;
-  Pose -> Listen;
-  Listen -> Main [label="ready"];
+  Top [label="Top Edge\nMemory Test Points", fillcolor="#E7EEF7"];
+  Main [label="62256\nMain Memory", fillcolor="#FBE9D0"];
+  Dec [label="Decode\n74LS138 / 74LS139", fillcolor="#EFE3F8"];
+  MMA [label="MMA Latches\nLow / High", fillcolor="#F6E7D8"];
+  MMD [label="MMD Path", fillcolor="#F6E7D8"];
+  PRG [label="6264\nProgram RAM", fillcolor="#E8F1E7"];
+  ROM [label="EEPROM /\nMonitor ROM", fillcolor="#E8F1E7"];
+  Power [label="Power Bulk\n+5V / GND lane", fillcolor="#F7F3E8"];
+  BottomEdgeB [label="Bottom Edge\nConnector / Bus In", fillcolor="#E7EEF7"];
+
+  Top -> Main;
+  BottomEdgeB -> Dec;
+  Dec -> PRG;
+  Dec -> ROM;
+  Dec -> MMA;
+  MMA -> Main;
+  MMD -> Main;
+  PRG -> BottomEdgeB;
+  ROM -> BottomEdgeB;
+  Main -> BottomEdgeB;
+  Power -> Main;
 }
 ''',
-    "Move": COMMON + r'''
+    "RodneyBoardC": COMMON + r'''
   rankdir=TB;
 
-  Boot [label="Boot /\nSafe Pose", fillcolor="#E8F1E7"];
-  Walk [label="Repeat\nForward Walk", fillcolor="#FBE9D0"];
-  Sense [label="Sense Fall\nState", fillcolor="#E7EEF7"];
-  Recover [label="Recover", fillcolor="#F7D9D9"];
+  node [shape=record];
 
-  Boot -> Walk;
-  Walk -> Sense;
-  Sense -> Walk [label="stable"];
-  Sense -> Recover [label="fallen"];
-  Recover -> Boot [label="reset posture"];
+  Top [label="Top Edge\nI/O Test Points / Jumpers", fillcolor="#E7EEF7"];
+  TSWR [label="TSWR\nLFSR / Random", fillcolor="#EFE3F8"];
+  ENVL [label="ENVL DIP\nSwitches", fillcolor="#E8F1E7"];
+  ENVH [label="ENVH DIP\nOptional", fillcolor="#E8F1E7"];
+  INBUF [label="Input Buffer", fillcolor="#FBE9D0"];
+  OUTLAT [label="Output Latch", fillcolor="#FBE9D0"];
+  ACTL [label="ACTL LEDs", fillcolor="#F6E7D8"];
+  ACTH [label="ACTH LEDs\nOptional", fillcolor="#F6E7D8"];
+  Dec [label="Local Decode", fillcolor="#EFE3F8"];
+  Power [label="Power Bulk\n+5V / GND lane", fillcolor="#F7F3E8"];
+  BottomEdgeC [label="Bottom Edge\nConnector / Bus In", fillcolor="#E7EEF7"];
+
+  Top -> TSWR;
+  Top -> ENVL;
+  Top -> ENVH;
+  ENVL -> INBUF;
+  ENVH -> INBUF;
+  TSWR -> INBUF;
+  BottomEdgeC -> Dec;
+  Dec -> INBUF;
+  Dec -> OUTLAT;
+  OUTLAT -> ACTL;
+  OUTLAT -> ACTH;
+  Power -> OUTLAT;
 }
 ''',
-    "ContactResponse": COMMON + r'''
-  rankdir=TB;
+    "RodneySelfProgrammingPath": COMMON + r'''
+  rankdir=LR;
 
-  Boot [label="Boot /\nSafe Pose", fillcolor="#E8F1E7"];
-  Sense [label="Sense /\nDecide", fillcolor="#E7EEF7"];
-  Hug [label="Happy Hug\nResponse", fillcolor="#F6E7D8"];
-  Idle [label="Idle Thought", fillcolor="#FBE9D0"];
-  Recover [label="Recover", fillcolor="#F7D9D9"];
+  ENVL [label="ENVL\nSwitches / Sensors", fillcolor="#E8F1E7"];
+  CPU [label="8085A\nBeta / Gamma Runtime", fillcolor="#FBE9D0"];
+  MMA [label="MMA Low / High\nIndirect Address", fillcolor="#F6E7D8"];
+  MEM [label="Main Memory\nLearned State Table", fillcolor="#EFE3F8"];
+  MMD [label="MMD\nData Path", fillcolor="#E7EEF7"];
+  ACTL [label="ACTL\nAction Output", fillcolor="#F7D9D9"];
 
-  Boot -> Idle;
-  Idle -> Sense;
-  Sense -> Hug [label="contact"];
-  Sense -> Idle [label="none"];
-  Hug -> Sense [label="complete"];
-  Sense -> Recover [label="instability"];
-  Recover -> Boot;
-}
-''',
-    "Maze": COMMON + r'''
-  rankdir=TB;
-
-  Start [label="Start /\nLoad Stored Poses", fillcolor="#E8F1E7"];
-  Scan [label="Head Scan\nPosition", fillcolor="#E7EEF7"];
-  Compare [label="When Distance\nbecame < 300", fillcolor="#FBE9D0"];
-  Obstacle [label="When there was\nan obstacle in front", fillcolor="#F7D9D9"];
-  Turn [label="Turn / Shift /\nAdvance", fillcolor="#F6E7D8"];
-  Forward [label="Forward Walk", fillcolor="#F6E7D8"];
-  Retry [label="Reset Sample /\nScan Counter", fillcolor="#EFE3F8"];
-
-  Start -> Scan;
-  Scan -> Compare;
-  Compare -> Forward [label="clear"];
-  Compare -> Obstacle [label="blocked"];
-  Obstacle -> Turn;
-  Turn -> Retry;
-  Retry -> Scan [label="re-sample"];
-  Forward -> Scan [label="next check"];
-}
-''',
-    "Football": COMMON + r'''
-  rankdir=TB;
-
-  Boot [label="Boot /\nSafe Pose", fillcolor="#E8F1E7"];
-  Search [label="Set Search Mode /\nSearch Turn", fillcolor="#E7EEF7"];
-  Track [label="Start Ball Tracking /\nApproach by Head Angle", fillcolor="#FBE9D0"];
-  Advance [label="Advance Left /\nAdvance Right /\nForward Walk", fillcolor="#F6E7D8"];
-  Kick [label="Left Kick /\nRight Kick", fillcolor="#EFE3F8"];
-  Lost [label="Increment / Reset\nLost Counter", fillcolor="#F7D9D9"];
-  Recover [label="Recover", fillcolor="#F7D9D9"];
-
-  Boot -> Search;
-  Search -> Track [label="ball found"];
-  Search -> Lost [label="not found"];
-  Lost -> Search [label="resume scan"];
-  Track -> Advance [label="aligned"];
-  Track -> Search [label="head reorient"];
-  Advance -> Kick [label="within range"];
-  Advance -> Track [label="adjust"];
-  Kick -> Search [label="resume"];
-  Track -> Recover [label="fall"];
-  Advance -> Recover [label="fall"];
-  Recover -> Boot [label="restore"];
+  ENVL -> CPU [label="current state"];
+  CPU -> MMA [label="select entry"];
+  MMA -> MEM [label="address"];
+  MEM -> MMD [label="learned byte"];
+  MMD -> CPU [label="read / write"];
+  CPU -> ACTL [label="response nibble"];
+  CPU -> MMD [label="store\nresponse/confidence"];
 }
 ''',
 }
@@ -166,9 +161,14 @@ DIAGRAMS = {
 def render(name: str, dot_source: str) -> None:
     dot_path = ROOT / f"{name}.dot"
     pdf_path = ROOT / f"{name}.pdf"
+    jpg_path = ROOT / f"{name}.jpg"
     dot_path.write_text(dot_source, encoding="ascii")
     subprocess.run(
         ["dot", "-Tpdf", str(dot_path), "-o", str(pdf_path)],
+        check=True,
+    )
+    subprocess.run(
+        ["dot", "-Tjpg", str(dot_path), "-o", str(jpg_path)],
         check=True,
     )
 
