@@ -1,3 +1,0 @@
-I’m treating this as a support ROM, not the learned code itself: the self-programming behavior still lives in writable RAM, but the ROM can provide reset, memory primitives, loader hooks, and a clean jump into the Beta/Gamma runtime. I’m checking the existing assembly style in the repo so the new source matches it before I write it.
-
-I’m writing this in two parts so it’s actually usable: a ROM-resident support monitor with stable entry points, and a tiny RAM-resident Beta seed program that calls those ROM routines. That matches the original architecture better than pretending the learned behavior itself belongs in ROM.
