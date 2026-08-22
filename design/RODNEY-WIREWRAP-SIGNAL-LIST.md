@@ -273,3 +273,5 @@ Add these on each board:
 ## Revision Notes
 
 This signal list is intentionally conservative. It favors simpler routing and clear observability over connector minimization.
+
+For the current physical build, we are using `2` edge connectors total and hard-wiring `Board C` into the stack harness. That keeps `Board A` and `Board B` removable during CPU and memory bring-up while leaving the lower-risk bench I/O board fixed.

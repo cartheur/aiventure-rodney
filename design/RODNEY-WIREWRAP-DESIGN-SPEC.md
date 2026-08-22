@@ -254,7 +254,7 @@ Recommendation:
 | Item | Qty | Notes |
 |---|---:|---|
 | Vector `8801-6` wire-wrap plugboard | 3 | CPU, memory, I/O |
-| 100-pin wire-wrap edge connector | 3 | one per board |
+| 100-pin wire-wrap edge connector | 2 | use on `Board A` and `Board B`; hard-wire `Board C` in the stack |
 | Vector wire-wrap terminals or equivalent | 300+ | optional depending on board strategy |
 
 ## CPU Board BoM

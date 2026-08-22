@@ -24,6 +24,7 @@ Use this set when you want a **silkscreen-like placement aid** for laying out wi
 - These overlays use the same placement coordinates as [RODNEY-WIREWRAP-COORDINATE-WORKSHEET.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/design/RODNEY-WIREWRAP-COORDINATE-WORKSHEET.md:1).
 - The mapping is tuned to the actual board photo in the repo, not to a fresh vector trace.
 - It is intended for fast socket placement and visual sanity-checking, not for archival-faithful reconstruction of factory legends.
+- For the current memory-board plan, treat `Board B U1`, `U7`, and `U8` as **ZIF clearance zones** if using `3 x 28-pin ZIFs`.
 
 ## Regeneration
 

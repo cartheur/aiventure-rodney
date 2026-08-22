@@ -108,6 +108,17 @@ Role: program RAM, monitor ROM, learned-state memory, decode, MMA/MMD path.
 - `U7` and `U8` should route down toward the lower bus band rather than across `U1`.
 - Decode outputs should fan from left to right, not back through the bus lane.
 
+### Board B ZIF Clearance Note
+
+If you choose `3 x 28-pin ZIFs` on Board B, treat `U1`, `U7`, and `U8` as **clearance footprints**, not just DIP bodies.
+
+- keep at least one empty hole row around each of `U1`, `U7`, and `U8` where practical
+- do not place tall headers, posts, or electrolytics immediately beside the ZIF lever side
+- keep the area above `U7` and `U8` free of tie-downs or harness crossings
+- leave `J1` wiring low and to the right so it does not interfere with the `U8` lever
+
+The current Board B placement is acceptable for `3 x 28-pin ZIFs`, but only if we preserve those three memory areas as no-crowding zones during final socket placement.
+
 ## Board C Worksheet
 
 Role: bench inputs, random source, output latch, LED observability, local decode.
@@ -153,6 +164,33 @@ Use two main cable groups and one optional service group.
 3. Dry-fit headers and test-post rows before soldering sockets permanently.
 4. Confirm wrap-tool hand clearance around `U1` on each board.
 5. Add decouplers and bulk capacitors before any dense signal wrapping.
+
+## Swap / ZIF Strategy
+
+These are the devices most worth isolating for swap testing:
+
+| Priority | Ref | Device | Recommendation | Reason |
+|---|---|---|---|---|
+| `1` | `U8` | EEPROM / monitor ROM | use a **ZIF on top of a machine-pin wire-wrap socket** | most likely image-swapped device during bring-up |
+| `2` | `U7` | `6264` program RAM | use a **ZIF on top of a machine-pin wire-wrap socket** if you have one | useful for RAM substitution and fault isolation |
+| `3` | `U1` Board A | `8085A` CPU | keep mechanically isolated and consider ZIF only if you expect CPU swapping | helpful if testing multiple 8085s, but ZIF height and lever access matter |
+| `4` | `U1` Board B | `62256` main memory | normal wire-wrap socket is fine unless you expect repeated memory experiments | usually less frequently swapped than ROM or program RAM |
+
+Recommended default:
+
+- definitely ZIF: `U8` EEPROM
+- good candidate for ZIF: `U7` program RAM
+- optional ZIF: `Board A U1` `8085A`
+- usually leave normal: `Board B U1` `62256`
+
+If you are committing to `3 x 28-pin ZIFs` on Board B, promote `Board B U1` from optional to planned and preserve clearance around all three memory positions from the start.
+
+Mechanical caution:
+
+- A ZIF should plug into a **machine-pin/socket-pin carrier**, not directly into fragile loose headers.
+- For Board B, the intended stack is: **Vector board -> soldered machine-pin wire-wrap socket -> plugged-in 28-pin ZIF -> device under test**.
+- Leave extra side clearance for the ZIF lever, especially around `Board A U1` and `Board B U8`.
+- On the current layout, `Board B U8` is the cleanest ZIF location, `Board B U7` is also reasonable, and `Board B U1` is workable if its surrounding wrap field is kept open.
 
 ## Assumptions and Cautions
 
