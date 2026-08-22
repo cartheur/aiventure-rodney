@@ -52,7 +52,7 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | I/O board | `74LS273` | `DIP-20` | 1 | Board C | output latch |
 | `[ ]` | I/O board | `74LS164` | `DIP-14` | 1 | Board C | pseudo-random source |
 | `[ ]` | I/O board | `74LS86` | `DIP-14` | 1 | Board C | XOR feedback |
-| `[ ]` | I/O board | `8-position` DIP switch | `DIP switch, 8-pos` | 2 | Board C | `ENVL`, `ENVH` |
+| `[ ]` | I/O board | `8-position` DIP switch | `DIP switch, 8-pos` | 2 | Board C | `ENVL`, `ENVH`; selected part: `CTS 195-8MST`, through-hole, piano/top-actuated |
 | `[ ]` | I/O board | `5mm` LEDs | `T-1 3/4` | 16 | Board C | `ACTL` plus debug / `ACTH` |
 | `[ ]` | I/O board | LED resistors `330R` | `axial resistor` | 16 | Board C | one per LED |
 | `[ ]` | I/O board | momentary switches | `panel / PCB switch` | 2 | Board C | mode / test |
@@ -75,7 +75,9 @@ Use this as the bench checklist for whether we have everything needed to start p
 | `[ ]` | Wiring | cable lacing, zip ties, or harness clamps | `consumable` | 1 pack | stack harness | recommended for the hard-wired board |
 | `[ ]` | Mechanical | standoffs / board supports | `hardware set` | 1 set | rack | enough for 3 boards |
 | `[ ]` | Mechanical | labels or masking tape flags | `consumable` | 1 pack | build aid | cable and signal marking |
-| `[ ]` | Power | regulated bench `+5V` supply | `bench supply` | 1 | bring-up | current limited |
+| `[ ]` | Power | `+5V` USB battery supply | `USB power bank` | 1 | bring-up | selected bench source for first logic bring-up |
+| `[ ]` | Power | HP `5004A` signature-analyzer clip leads | `grabber / clip lead` | 2 | bring-up | used to clip `+5V` and `GND` onto board input pins |
+| `[ ]` | Power | wall-powered `+5V` bench supply | `bench supply` | 1 optional | fallback | use only if the USB source shows droop or unstable behavior |
 | `[ ]` | Tools | wire-wrap tool | `hand tool` | 1 | build | manual or powered |
 | `[ ]` | Tools | unwrap tool | `hand tool` | 1 | build | strongly recommended |
 | `[ ]` | Tools | soldering iron | `bench tool` | 1 | build | connectors, headers |
@@ -122,6 +124,7 @@ Board B placement note:
 - This sheet is meant to be the simplified current-build target list.
 - For the `2-connector` build, `Board C` is the best hard-wired candidate because it is the least likely board to need repeated removal during CPU and memory bring-up.
 - The one part family still worth deciding explicitly before ordering is the exact EEPROM package width, because that can affect whether you want a DIP-24 or DIP-28 socket in Board B.
+- Current bench-power plan is a `+5V` USB battery with `2` HP `5004A` signature-analyzer style clips landing on board power-input pins; verify stable `5V` under load and keep a solid common ground before CPU bring-up.
 
 ## Selected Memory Part
 
@@ -140,3 +143,18 @@ Current selected `U1` main memory:
 - `DIP-28` PDIP
 - industrial temp grade `-40C to +85C`
 - direct fit for the current `Board B U1` footprint and `28-pin ZIF` plan
+
+Current selected `SW1` and `SW2` input switches:
+
+- `CTS 195-8MST`
+- `8-position` DIP switch
+- through-hole
+- piano / top-actuated
+- tape sealed
+- selected because it matches the current `Board C` operator-facing switch layout better than the side-actuated `BPA` family
+
+Future variant stock:
+
+- `2 x BPA08B`
+- retained as stock for possible future miniaturized or side-access board variants
+- not planned for the current `Board C` Rodney build

@@ -28,7 +28,7 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],I/O board,74LS273,DIP-20,1,Board C,output latch
 [ ],I/O board,74LS164,DIP-14,1,Board C,pseudo-random source
 [ ],I/O board,74LS86,DIP-14,1,Board C,XOR feedback
-[ ],I/O board,8-position DIP switch,"DIP switch, 8-pos",2,Board C,"ENVL, ENVH"
+[ ],I/O board,8-position DIP switch,"DIP switch, 8-pos",2,Board C,"ENVL, ENVH; selected part CTS 195-8MST, through-hole, piano/top-actuated"
 [ ],I/O board,5mm LEDs,T-1 3/4,16,Board C,"ACTL plus debug / ACTH"
 [ ],I/O board,330R LED resistor,axial resistor,16,Board C,one per LED
 [ ],I/O board,momentary switches,"panel / PCB switch",2,Board C,"mode / test"
@@ -51,9 +51,11 @@ Check,Category,Item,Footprint,Qty,Board / Use,Notes
 [ ],Wiring,cable lacing zip ties or harness clamps,consumable,1 pack,stack harness,recommended for the hard-wired board
 [ ],Mechanical,standoffs / board supports,hardware set,1 set,rack,enough for 3 boards
 [ ],Mechanical,labels or masking tape flags,consumable,1 pack,build aid,"cable and signal marking"
-[ ],Power,regulated bench +5V supply,bench supply,1,bring-up,current limited
+[ ],Power,+5V USB battery supply,USB power bank,1,bring-up,selected bench source for first logic bring-up
+[ ],Power,HP 5004A signature-analyzer clip leads,"grabber / clip lead",2,bring-up,used to clip +5V and GND onto board input pins
 [ ],Tools,wire-wrap tool,hand tool,1,build,manual or powered
 [ ],Tools,unwrap tool,hand tool,1,build,strongly recommended
 [ ],Tools,soldering iron,bench tool,1,build,"connectors, headers"
 [ ],Tools,logic probe,bench tool,1,debug,recommended
 [ ],Tools,oscilloscope,bench instrument,1,debug,recommended
+[stock],Future variant,BPA08B side-actuated DIP switch,"DIP switch, 8-pos",2,future variants,"held for possible miniaturized or side-access builds; not for current Rodney Board C"

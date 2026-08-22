@@ -127,8 +127,8 @@ Role: bench inputs, random source, output latch, LED observability, local decode
 
 | Ref | Function | Package | Pin-1 origin | Orientation | Notes |
 |---|---|---|---|---|---|
-| `SW1` | `ENVL` DIP switch pack | 8-position DIP switch | `X8, Y17` | `E-W` | operator access |
-| `SW2` | `ENVH` optional DIP switch | 8-position DIP switch | `X8, Y27` | `E-W` | can leave unpopulated |
+| `SW1` | `ENVL` DIP switch pack | 8-position DIP switch | `X8, Y17` | `E-W` | selected part `CTS 195-8MST`; top/piano access |
+| `SW2` | `ENVH` optional DIP switch | 8-position DIP switch | `X8, Y27` | `E-W` | selected part `CTS 195-8MST`; can leave unpopulated |
 | `U1` | input buffer | DIP-20 narrow | `X29, Y17` | `E-W` | between switches and bus |
 | `U2` | output latch | DIP-20 narrow | `X49, Y17` | `E-W` | short path to LEDs |
 | `U3` | local decode | DIP-16 narrow | `X29, Y27` | `E-W` | local register select |

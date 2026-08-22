@@ -218,16 +218,29 @@ Recommendation:
 
 - `74LS273` latch for LED output register
 - DIP switch packs for `ENVL` and `ENVH`
+  - selected first-pass part: `CTS 195-8MST`, through-hole, `8-position`, piano/top-actuated
 - LED bar or discrete LEDs for `ACTL` and debug signals
 
 ## Electrical Requirements
 
 - `+5V` logic rail, regulated
+- current first-pass bench source: `+5V` USB battery clipped onto the logic rail with `2` HP `5004A` signature-analyzer style grabber leads
 - separate bench `+12V` only if later actuator hardware is attached
 - local `0.1uF` decoupler per IC
 - one bulk capacitor per board, `47uF` to `470uF`
 - star-ish grounding between boards
 - short bus runs between board connectors where possible
+
+Preferred bring-up strategy:
+
+- use the lightweight USB battery setup for first power-up, reset checks, and initial logic validation
+- fall back to a wall-powered bench supply only if behavior suggests power droop, clip resistance, or inadequate current delivery
+
+Bring-up caution:
+
+- confirm the USB source holds close to `5V` with the full logic load attached
+- clip both `+5V` and `GND` at firm board input points, not at random logic nodes
+- if reset or clock behavior looks unstable, suspect power-source droop or clip resistance early
 
 ## Wire-Wrap Construction Rules
 
