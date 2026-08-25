@@ -147,6 +147,65 @@ The main remaining hard shortages for two complete units are:
 
 Everything else now looks materially better than earlier passes, especially sockets, resistor stock, LEDs, crystals, and general logic coverage.
 
+Itemized combined check:
+
+| Build item | Need for 1 | Need for 2 | Combined available now | 1-unit status | 2-unit status | Notes |
+|---|---:|---:|---:|---|---|---|
+| Vector `8801-6` boards | 3 | 6 | 4 | covered | short by 2 | on-hand inventory is the limiting factor |
+| `R681-2` edge connectors | 2 | 4 | 2 | covered | short by 2 | exact two-unit blocker with the boards |
+| `8085A` CPU | 1 | 2 | 4 | covered | covered | inventory already exceeds two-unit target |
+| `62256` SRAM | 1 | 2 | 10 | covered | covered | strong on-hand margin |
+| `6264` SRAM | 1 | 2 | 6 | covered | covered | basket quantity alone clears two units |
+| `AT28C64B-15PU` EEPROM | 1 | 2 | 10 | covered | covered | basket quantity alone clears two units |
+| `74LS373` | 1 | 2 | 20 | covered | covered | on hand |
+| `74LS245` | 2 | 4 | 20 | covered | covered | basket quantity alone clears two units |
+| `74LS138` | 2 | 4 | 10 | covered | covered | basket quantity alone clears two units |
+| `74LS04` | 1 | 2 | 60 | covered | covered | on hand |
+| `74LS00` | 2 | 4 | 60 | covered | covered | on hand |
+| `74LS139` | 1 | 2 | 10 | covered | covered | basket quantity alone clears two units |
+| `74LS273` | 3 | 6 | 10 | covered | covered | basket quantity alone clears two units |
+| `74LS32` | 1 | 2 | 10 | covered | covered | optional baseline glue also covered |
+| `74LS244` | 1 | 2 | 20 | covered | covered | on hand |
+| `74LS164` | 1 | 2 | 10 | covered | covered | basket quantity alone clears two units |
+| `74LS86` | 1 | 2 | 10 | covered | covered | basket quantity alone clears two units |
+| `5 MHz` crystal | 1 | 2 | 10 | covered | covered | on hand |
+| `22pF` capacitors | 2 | 4 | 10 | covered | covered | crystal load pair covered with margin |
+| `0.1uF` decouplers | 17 | 34 | 100 | covered | covered | basket quantity alone clears two units |
+| `10uF` reset capacitor | 1 | 2 | 100 | covered | covered | basket quantity alone clears two units |
+| `47uF` bulk capacitors | 3 | 6 | 20 | covered | covered | basket quantity alone clears two units |
+| `10k` resistors | 10 | 20 | 100 | covered | covered | discrete stock is enough for reset, pull-ups, and spare use |
+| `1k` resistors | 4 | 8 | 100 | covered | covered | basket quantity alone clears two units |
+| `330R` LED resistors | 16 | 32 | 110 | covered | covered | basket plus inventory gives wide margin |
+| `5mm` LEDs | 16 | 32 | 120 | covered | covered | inventory already clears two units |
+| `195-8MST` DIP switch | 2 | 4 | 10 | covered | covered | strong margin |
+| momentary / reset pushbuttons | 3 | 6 | 4 | covered with fit check | partial | enough for one unit; two units need two more unless mounting plan changes |
+| DIP-40 WW socket | 1 | 2 | 9 | covered | covered | on hand |
+| DIP-28 WW socket | 3 | 6 | 18 | covered | covered | basket plus inventory gives strong margin |
+| DIP-20 WW socket | 6 | 12 | 25 | covered | covered | basket resolves the earlier shortfall |
+| DIP-16 WW socket | 3 | 6 | 36 | covered | covered | on hand |
+| DIP-14 WW socket | 5 | 10 | 30 | covered | covered | on hand |
+| DIP-28 ZIF socket plan | 3 | 6 | 6 | covered | covered exactly | no spare margin at the two-unit level |
+| `30 AWG` Kynar wire-wrap wire | 3 spools | 6 to 10 spools | 8 spools | covered | covered | current on-hand color stock clears the two-unit target band |
+| red power wire | 1 spool | 2 spools | 1 spool | covered | partial | one spool is enough now; two-unit comfort margin is not yet explicit |
+| black power wire | 1 spool | 2 spools | 1 spool | covered | partial | one spool is enough now; two-unit comfort margin is not yet explicit |
+| ribbon or grouped cable | 2 lengths | 4 lengths | 3 ft plus partial connector hardware | partial | partial | likely workable for one unit, but final cut plan still needs confirmation |
+| `0.1"` header material | 4 strips | 8 strips | mixed candidate stock only | partial | partial | Samtec, Aries, and Harwin parts may cover this, but not yet as a clean committed set |
+| test posts / harness anchor hardware | 1 baseline set | 2 baseline sets | mixed candidate stock only | partial | partial | repo inventory suggests likely material, but the exact allocation is not yet called closed |
+| standoffs / board supports | 1 set | 2 sets | not tracked | missing | missing | mechanical gap remains |
+| cable lacing / clamps / zip ties | 1 pack | 2 packs | not tracked | missing | missing | consumable gap remains |
+| labels / tape flags | 1 pack | 2 packs | not tracked | missing | missing | build-aid gap remains |
+| `+5V` USB battery supply | 1 | 2 | not tracked | missing | missing | selected bring-up source is not yet tracked as on hand |
+| HP `5004A` clip leads | 2 | 4 | not tracked | missing | missing | bring-up accessory gap remains |
+| wire-wrap tool | 1 | 1 | not tracked | missing | missing | required bench tool still untracked here |
+| unwrap tool | 1 | 1 | not tracked | missing | missing | strongly recommended tool still untracked here |
+| `Weller` soldering iron | 1 | 1 | 1 | covered | covered | explicitly on hand |
+| logic probe | 1 | 1 | not tracked | missing | missing | recommended debug tool still untracked here |
+| oscilloscope | 1 | 1 | not tracked | missing | missing | recommended debug tool still untracked here |
+
+Matching CSV:
+
+- [BASKET-FINAL-CHECK.csv](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/basket/BASKET-FINAL-CHECK.csv:1)
+
 ## Short Read
 
 Current basket-only status against the baseline 3-board Rodney machine:
