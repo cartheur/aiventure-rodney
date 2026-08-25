@@ -147,6 +147,17 @@ Role: bench inputs, random source, output latch, LED observability, local decode
 - Visual outputs stay right.
 - `TSWR` stays above the switch path so it does not get lost in LED or pull-up wiring.
 
+### Optional Joy Circuit
+
+If the `ETI Systems J1-00105` joystick is installed as **the joy circuit**:
+
+- place the panel wiring landing point near the `SW2` / `ENVH` side of `Board C`
+- map `JOY_UP`, `JOY_DN`, `JOY_LT`, and `JOY_RT` onto `4` `ENVH` input bits through the existing `U1` input-buffer path
+- use `4 x 10k` pull-ups to `+5V` or one equivalent resistor network so each line idles high and the joystick contact pulls low when active
+- keep the first-pass circuit simple: no latch, no ADC, and no extra state machine
+- add optional small series resistors only if the panel wiring run proves noisy
+- handle debounce in software first; add RC or Schmitt cleanup later only if testing shows a real need
+
 ## Board-to-Board Cable Worksheet
 
 Use two main cable groups and one optional service group.

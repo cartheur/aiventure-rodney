@@ -182,6 +182,14 @@ Bench-first assignment:
 
 This keeps later Beta/Gamma mapping close to the book’s naming scheme without forcing exact original hardware.
 
+Optional joy circuit overlay:
+
+- if the `ETI Systems J1-00105` operator joystick is installed, treat it as **the joy circuit**
+- recommended named inputs: `JOY_UP`, `JOY_DN`, `JOY_LT`, `JOY_RT`
+- preferred first-pass mapping: land the joy circuit on `ENVH` or another spare `Board C` read path so the baseline `ENVL` motor or status mapping stays intact
+- alternative temporary mapping: repurpose spare `ENVL` bits during bench experiments if a dedicated second read path is not yet populated
+- intended use: human environmental feedback, corrective cueing, reward-direction tagging, and manual behavior nudging during trainer experiments
+
 ## Recommended ACTL Bit Assignment
 
 | Bit | Name | Meaning |

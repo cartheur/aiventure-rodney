@@ -183,6 +183,17 @@ Future variant stock:
 - retained as stock for possible future miniaturized or side-access board variants
 - not planned for the current `Board C` Rodney build
 
+Optional operator-feedback control:
+
+- `1 x ETI Systems J1-00105` joystick is now on hand and is a strong optional `Board C` add-on for environmental-feedback training work
+- call this optional block **the joy circuit**
+- treat it as a `4-way` digital input device rather than an analog position control
+- recommended use: map `up`, `down`, `left`, and `right` into `4` spare `Board C` input lines through the existing input-buffer path
+- recommended signal names: `JOY_UP`, `JOY_DN`, `JOY_LT`, `JOY_RT`
+- recommended electrical treatment: add pull-ups or pull-downs as needed and handle debounce in software first unless tests show a real need for hardware cleanup
+- best early role: human-in-the-loop correction, reward-direction cueing, manual behavior nudging, or explicit environment-response tagging during training experiments
+- integration stance: optional only, not part of the baseline first-pass machine, but a very plausible second-step operator interface once `Board C` bring-up is stable
+
 Forward-looking memory note:
 
 - EEPROM datasheet support has been added to this BoM workflow for the current monitor / bootstrap path.

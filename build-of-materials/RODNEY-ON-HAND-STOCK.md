@@ -38,6 +38,7 @@ Last updated: `2026-08-25`
 | Analog preview | quad op-amp | `LM324AN` | 0 baseline | 20 in stock | preview stock | supports light-sensing gain, buffering, and simple active-filter experiments |
 | Analog preview | microphone amp breakout | `Adafruit 1713 / Mouser 485-1713` | 0 baseline | 6 in stock | preview stock | MAX9814 electret mic amp breakout for sound-trigger experiments |
 | Analog preview | light sensor | `CdS photoresistor` | 0 baseline | 30 in stock | preview stock | inventory list now shows ample stock for light-threshold and beam-break style experiments |
+| Operator control | 4-way joystick | `ETI Systems J1-00105` | 0 baseline | 1 in stock | optional stock | rugged panel-mount digital joystick; good candidate for `Board C` manual direction, mode, or training input experiments |
 | Tools | soldering iron | `Weller` | 1 | in stock |  | primary soldering iron for the Rodney build |
 
 ## Expansion-Oriented Stock
@@ -56,6 +57,7 @@ These are not required to assemble the baseline machine, but are worth tracking 
 | Analog preview | `LM324AN` quad op-amp | 1 to 2 | 20 in stock | enough for several light or microphone front-end experiments |
 | Analog preview | `Adafruit 1713 / 485-1713` microphone amp breakout | 1 to 2 | 6 in stock | enough for multiple sound-sensing preview builds |
 | Analog preview | `CdS` photoresistor | 1 to 2 | 30 in stock | enough for multiple light-sensing preview builds and spares |
+| Operator control | `ETI Systems J1-00105` joystick | 1 optional | 1 in stock | useful if we want a sealed front-panel `up/down/left/right` manual input without committing it to the baseline BOM |
 
 ## Readiness Snapshot
 
