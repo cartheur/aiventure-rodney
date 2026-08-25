@@ -1,0 +1,14 @@
+Part number,description,manufacturer,quantity,category
+TMP8085AP-2,CPU,Toshiba,4
+D0808-42,DIP-08-WW,Harwin,13
+D0814-42,DIP-14-WW,Harwin,30
+D0816-42,DIP-16-WW,Harwin,36
+D0818-42,DIP-18-WW,Harwin,8
+123-93-320-41-001000,DIP-20-WW,Mill-Max,5
+123-43-624-41-801000,DIP-24-WW,Mill-Max,13
+123-47-628-41-001000,DIP-28-WW,Mill-Max,8
+123-47-640-41-001000,DIP-40-WW,Mill-Max,9
+123-47-648-41-001000,DIP-48-WW,Mill-Max,1
+251-05000,5 MHz crystal,Parallax,10
+485-1713,MAX9814,Adafruit,6
+101110,CdS Photoresistor,Soldered,30
