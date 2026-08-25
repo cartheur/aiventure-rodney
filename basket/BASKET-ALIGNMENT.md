@@ -2,7 +2,7 @@
 
 Alignment of [`basket/basket-items.xls`](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/basket/basket-items.xls:1) against the current baseline build target in [`build-of-materials/RODNEY-3BOARD-SINGLE-SHEET-BOM.md`](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/RODNEY-3BOARD-SINGLE-SHEET-BOM.md:1).
 
-Last updated: `2026-08-24`
+Last updated: `2026-08-25`
 
 ## Scope
 
@@ -28,14 +28,17 @@ Last updated: `2026-08-24`
 | `0.1uF` capacitor | 100 | 17 | covered | enough for baseline decoupling with wide spare margin |
 | `10uF` electrolytic | 100 | 1 | covered | enough for reset timing or other small bulk use |
 | `47uF` electrolytic | 20 | 3 | covered | enough for one bulk capacitor per board |
-| `228-1290-00-0602J` 3M `28`-contact socket | 4 | 3 required `DIP-28 ZIF` | covered | confirmed basket part for the planned `Board B U1/U7/U8` ZIF positions, with `1` spare |
+| `228-1290-00-0602J` 3M `28`-contact socket | 6 | 3 required `DIP-28 ZIF` | covered | enough for the full `U1/U7/U8` ZIF plan on two Rodney units, with no spare beyond that |
 
 ## Partial Coverage Or Needs Confirmation
 
 | Basket item | Basket qty | Build need | Status | Notes |
 |---|---:|---:|---|---|
-| `123-47-628-41-001000` Mill-Max wire-wrap socket | 10 | 3 | partial | appears to cover the required `DIP-28` wire-wrap sockets for `U1`, `U7`, `U8`, but not the additional `DIP-40`, `DIP-20`, `DIP-16`, or `DIP-14` wire-wrap sockets |
-| `3365/40-CUT-LENGTH` 40-conductor ribbon cable | 6 ft | 2 lengths | partial | likely enough raw cable for `CAB-A-B` and `CAB-A-C`, but one cable is meant to be connectorized and one fixed |
+| `123-47-628-41-001000` Mill-Max wire-wrap socket | 10 | 3 | covered for baseline | enough for one unit and contributes strong margin toward a two-unit build when combined with on-hand inventory |
+| `D0820-42` Harwin `DIP-20` wire-wrap socket | 20 | 6 | covered for baseline | resolves the main `DIP-20` socket shortage and gives useful margin for a two-unit build when combined with on-hand inventory |
+| `RN60D3300FB14` `330R` resistor | 100 | 16 | covered for baseline | enough for a single unit with strong margin and materially improves two-unit LED-resistor readiness when combined with on-hand stock |
+| `MF1/4DCT52R1001F` `1k` resistor | 100 | 4 | covered | far exceeds the baseline optional `1k` stock target |
+| `3365/40-CUT-LENGTH` 40-conductor ribbon cable | 3 ft | 2 lengths | partial | likely enough for a single baseline machine, but probably light for two complete units unless the cable runs are kept very short |
 | `09185406904` Harting `40P` male IDC long lever | 2 | connectorized cable hardware | partial | useful for the connectorized harness path |
 | `09185406804` Harting `40P` female IDC | 2 | connectorized cable hardware | partial | useful for the connectorized harness path |
 | `40-600-21` Aries `40`-pin header | 2 | `4` header strips | partial | may help with header stock, but the baseline BOM still calls for more header material |
@@ -44,7 +47,9 @@ Last updated: `2026-08-24`
 
 ## Missing From The Basket For The Baseline Build
 
-These items are still needed for the current 3-board machine and do not appear in the basket in a clear baseline-ready form.
+These items do not appear in the basket in a clear baseline-ready form.
+
+This is a basket-only gap list, not a combined readiness verdict. Some of these items are now present in `inventory/list.csv`; use the `Final Fitness Check` section below for the current combined `inventory + basket` status.
 
 | Build item | Qty | Notes |
 |---|---:|---|
@@ -92,6 +97,7 @@ These are not wrong purchases, but they are not required to assemble the current
 | `BPA08B` side-actuated DIP switch | repo already treats this as future variant stock, not current `Board C` |
 | `AT28C256-15PU` | future EEPROM stock, not baseline |
 | `SN74LS85N` | planned experiment / decision-logic stock, not baseline |
+| `LM324AN` op-amp | useful for the new light and sound analog-preview path, not part of the current digital baseline |
 | Raspberry Pi HDMI cable | not part of Rodney baseline BOM |
 | TE `5749180-1` DIN connector | not in current baseline BOM |
 | `LM339AN` comparator | not in current baseline BOM |
@@ -119,11 +125,33 @@ If the goal is to make the basket line up with the current build target:
 3. Add the missing baseline CPU, main memory, support logic, sockets, LEDs, resistors, wiring, connectors, and mechanical items listed above.
 4. Decide whether the non-baseline extras should stay in this order as future stock or move to a separate expansion basket.
 
+## Basket Update Note
+
+- Basket workbook updated on `2026-08-25`.
+- Current workbook now includes `LM324AN` for the analog preview path.
+- Current workbook also shows `LM339AN` quantity increased to `25`, which is well beyond the comparator count needed for preview work.
+- Current workbook now shows `6` `DIP-28 ZIF` sockets and `20` `D0820-42` `DIP-20` wire-wrap sockets, which materially improves two-unit readiness.
+- Current workbook now also includes `330R` LED resistors and `1k` resistor stock, closing two earlier passive-component gaps.
+
+## Final Fitness Check
+
+Using the current basket together with the latest `inventory/list.csv`:
+
+- one complete Rodney unit: fit looks strong
+- two complete Rodney units: not fully closed yet
+
+The main remaining hard shortages for two complete units are:
+
+- `2` more `Vector 8801-6` boards
+- `2` more `R681-2` edge connectors
+
+Everything else now looks materially better than earlier passes, especially sockets, resistor stock, LEDs, crystals, and general logic coverage.
+
 ## Short Read
 
-Current basket status against the baseline 3-board Rodney machine:
+Current basket-only status against the baseline 3-board Rodney machine:
 
 - covered well: `6264`, `AT28C64B`, `74LS32`, `74LS86`, `74LS164`, `74LS273`, `74LS245`, `74LS138`, `74LS139`, `195-8MST`, confirmed `DIP-28 ZIF`, `22pF`, `0.1uF`, `10uF`, `47uF`
 - partly covered or unclear: non-ZIF wire-wrap sockets, interboard cable hardware, header stock, pushbutton mechanics
-- still missing: core boards, edge connectors, `8085A`, `62256`, `74LS373`, `74LS04`, `74LS00`, `74LS244`, most sockets, LEDs, resistor stock, wire, tooling, and bring-up hardware
+- still missing from the basket view: core boards, edge connectors, `8085A`, `62256`, `74LS373`, `74LS04`, `74LS00`, `74LS244`, most sockets, LEDs, resistor stock, wire, tooling, and bring-up hardware
 - extra for future work: `AT28C256`, `74LS85`, side-actuated DIP switches, display and microcontroller parts, and several unrelated support parts

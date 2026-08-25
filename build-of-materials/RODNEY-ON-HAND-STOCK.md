@@ -9,7 +9,7 @@ Related references:
 - [RODNEY-3BOARD-SINGLE-SHEET-BOM.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/RODNEY-3BOARD-SINGLE-SHEET-BOM.md:1)
 - [RODNEY-3BOARD-SINGLE-SHEET-BOM.csv](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build-of-materials/RODNEY-3BOARD-SINGLE-SHEET-BOM.csv:1)
 
-Last updated: `2026-08-22`
+Last updated: `2026-08-25`
 
 ## Current On-Hand Stock
 
@@ -28,12 +28,16 @@ Last updated: `2026-08-22`
 | Sockets | `DIP-28` wire-wrap socket | memory devices | 3 | in stock |  | baseline requirement only; expansion spares can be tracked here too |
 | Sockets | `DIP-40` wire-wrap socket | `8085A` | 1 | in stock |  | CPU is fixed to a standard wire-wrap socket plan |
 | CPU board | CPU | `8085A` | 1 | 4 | +3 | enough for baseline build plus swap and fault-isolation margin |
-| CPU board | crystal | `5 MHz` | 1 | 1 purchased | 0 | original `Parts-List.csv` already lists a purchased `5MHz crystal` |
+| CPU board | crystal | `5 MHz` | 1 | 10 in stock | +9 | inventory list now shows strong crystal margin for multiple Rodney units and experiments |
 | Memory board | decode glue | `74LS32N` | 1 | 10 purchased | +9 | planned support logic for the improved build; datasheet already in repo |
 | I/O board | input buffer | `74LS244` | 1 | 20 | +19 | baseline Board C input-buffer part; strong spare margin already on hand |
 | I/O board | pseudo-random source | `74LS164` | 1 | 10 planned | 9 planned spare | baseline shift-register part for the Board C pseudo-random source |
 | I/O board | XOR feedback | `74LS86` | 1 | 10 planned | 9 planned spare | baseline part for the pseudo-random source on Board C |
 | I/O board | DIP switch | `CTS 195-8MST` | 2 | 10 planned | 8 planned spare | `SW1`, `SW2`; strong margin for alternates and rework |
+| Passive | `10k` resistor | `MF1/4DCT52R1002F` | 10 baseline stock target | 100 in stock | +90 | covers reset, pull-ups, and general glue stock for multiple Rodney units |
+| Analog preview | quad op-amp | `LM324AN` | 0 baseline | 20 in stock | preview stock | supports light-sensing gain, buffering, and simple active-filter experiments |
+| Analog preview | microphone amp breakout | `Adafruit 1713 / Mouser 485-1713` | 0 baseline | 6 in stock | preview stock | MAX9814 electret mic amp breakout for sound-trigger experiments |
+| Analog preview | light sensor | `CdS photoresistor` | 0 baseline | 30 in stock | preview stock | inventory list now shows ample stock for light-threshold and beam-break style experiments |
 | Tools | soldering iron | `Weller` | 1 | in stock |  | primary soldering iron for the Rodney build |
 
 ## Expansion-Oriented Stock
@@ -49,6 +53,35 @@ These are not required to assemble the baseline machine, but are worth tracking 
 | Memory expansion | `256K`-class memory devices | optional future reserve |  | for post-`GAMMA-1` / `DELTA-1` style experiments |
 | Decode experiments | jumper / header strap hardware | 1 small pack |  | useful for alternate chip-select or bank-select work |
 | Decision experiments | `74LS85` magnitude comparator | 1 to 2 | 10 planned | purchase planned; strong margin if `4-bit wonder` testing suggests we want hardware compare, threshold, or ranking support |
+| Analog preview | `LM324AN` quad op-amp | 1 to 2 | 20 in stock | enough for several light or microphone front-end experiments |
+| Analog preview | `Adafruit 1713 / 485-1713` microphone amp breakout | 1 to 2 | 6 in stock | enough for multiple sound-sensing preview builds |
+| Analog preview | `CdS` photoresistor | 1 to 2 | 30 in stock | enough for multiple light-sensing preview builds and spares |
+
+## Readiness Snapshot
+
+Current status using the latest `inventory/list.csv` plus the active `basket/basket-items.csv`:
+
+- one complete Rodney unit: fit looks strong
+- two complete Rodney units: electronics core looks strong, but the full build is not yet closed out
+
+Main strengths for the two-unit target:
+
+- CPUs, core TTL, memory devices, WW sockets, ZIF sockets, crystals, LEDs, and common resistor or capacitor stock are all in good shape
+- wire-wrap wire and basic red or black power wire are now on hand
+- analog preview branch for light and sound sensing is well covered
+
+Main remaining blockers for the two-unit target:
+
+- `Vector 8801-6` boards: `4` on hand vs `6` needed
+- `R681-2` edge connectors: `2` on hand vs `4` needed
+
+Still worth confirming before calling the two-unit build fully ready:
+
+- exact header-strip plan for service and interconnect
+- test-post and harness-anchor allocation per unit
+- pushbutton mounting details
+- standoffs and final mechanical stack hardware
+- final cable-length comfort margin
 
 ## Theoretical `6264` Ceiling
 
