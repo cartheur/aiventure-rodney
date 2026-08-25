@@ -359,6 +359,54 @@ These are not required for the first bench validation:
 | relay or transistor motor driver stage | later | for mobile Rodney |
 | analog sensor front-end hardware | later | for richer environment bits |
 
+### Analog Sensor Preview
+
+If we want to preview a richer `ENVL` input path without changing the baseline Rodney bring-up, the cleanest branch is a small analog front-end prototype that converts real-world signals into stable logic bits.
+
+Suggested preview targets:
+
+- ambient light or directed light level
+- microphone or sound-trigger level
+
+Suggested preview parts:
+
+| Item | Qty | Notes |
+|---|---:|---|
+| `LM324` quad op-amp DIP-14 | 1 | gain, buffering, simple active filtering |
+| `LM339` quad comparator DIP-14 | 1 | converts analog levels into stable TTL-style threshold outputs |
+| `DIP-14` wire-wrap socket | 2 | one each for `LM324` and `LM339` |
+| photoresistor or photodiode | 1 to 2 | light input source |
+| electret microphone capsule | 1 | sound input source |
+| microphone bias resistor `2.2k` to `10k` | 1 to 2 | microphone front-end bias |
+| resistor assortment | small set | `1k`, `10k`, `47k`, `100k`, `1M` for gain, dividers, pull-ups, hysteresis |
+| trimmer potentiometer `10k` or `100k` | 2 | adjustable thresholds for light and sound channels |
+| capacitor assortment | small set | `1nF`, `10nF`, `100nF`, `1uF` for coupling, filtering, and timing |
+| `0.1uF` ceramic decoupling capacitors | 2 | local supply bypass, one per IC minimum |
+| `1N4148` small-signal diodes | 2 to 4 | optional input clamp or envelope shaping |
+| LED plus series resistor | 2 | one activity or threshold LED per preview channel |
+| test posts or header pins | 4 to 8 | expose analog node, comparator output, and ground |
+
+Light-sensing preview path:
+
+1. sensor divider using photoresistor or photodiode
+2. optional `LM324` gain or buffering stage
+3. `LM339` threshold stage with adjustable hysteresis
+4. logic-level output to a spare Rodney input bit or a test LED
+
+Sound-sensing preview path:
+
+1. electret microphone with bias resistor
+2. AC-coupled `LM324` gain stage
+3. optional envelope or low-pass shaping
+4. `LM339` threshold stage with adjustable trip level
+5. logic-level output to a spare Rodney input bit or a test LED
+
+Preview intent:
+
+- prove that Rodney can accept conditioned non-switch inputs
+- keep analog work off the baseline digital boards until thresholds are understood
+- reduce risk by treating light and sound sensing as an external bench module first
+
 ## Preferred Part Strategy
 
 - Use genuine or tested `8085A` parts.
