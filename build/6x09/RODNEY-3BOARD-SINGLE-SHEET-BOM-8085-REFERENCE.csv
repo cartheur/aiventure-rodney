@@ -1,0 +1,60 @@
+Check,Category,Item,Footprint,Qty,Board / Use,Notes
+[ ],Core,Vector 8801-6 wire-wrap plugboard,"S-100 / 100-pin board",3,"A, B, C",one board per function
+[ ],Core,100-pin wire-wrap edge connector,100-pin edge connector,2,"Board A, Board B","Board C is hard-wired"
+[ ],Core,0.1 inch male header strips,0.1 inch header,4,all boards,"bus, service, debug"
+[ ],Core,test posts / turret posts,turret / post,18,all boards,"6 + 8 + 4 top-edge minimum"
+[ ],Core,hard-wire interboard harness anchor points,"lug / header / clamp",1 set,Board C,"header, solder lugs, or strain-relieved tie points"
+[ ],CPU board,8085A,DIP-40,1,Board A,CPU
+[ ],CPU board,74LS373,DIP-20,1,Board A,address latch
+[ ],CPU board,74LS245,DIP-20,1,Board A,data transceiver
+[ ],CPU board,74LS138,DIP-16,1,Board A,coarse decode
+[ ],CPU board,74LS04,DIP-14,1,Board A,clock/reset glue
+[ ],CPU board,74LS00,DIP-14,1,Board A,glue logic
+[ ],CPU board,crystal 5 MHz,2-pin crystal,1,Board A,"selected standard; already purchased in original parts list"
+[ ],CPU board,22pF crystal load capacitor,"radial / ceramic",2,Board A,if crystal circuit uses them
+[ ],CPU board,reset pushbutton,"panel / PCB switch",1,Board A,top-edge service area
+[ ],CPU board,10k resistor,axial resistor,2,Board A,reset network
+[ ],CPU board,1uF to 10uF capacitor,radial electrolytic,1,Board A,reset timing
+[ ],Memory board,62256 SRAM,DIP-28,1,Board B,"main memory; selected part Alliance AS6C62256-55PIN"
+[ ],Memory board,6264 SRAM,DIP-28,1,Board B,"program RAM; selected part Alliance AS6C6264-55PCN"
+[ ],Memory board,AT28C64B-15PU EEPROM,DIP-28,1,Board B,"monitor / bootstrap; selected part"
+[ ],Memory board,74LS138,DIP-16,1,Board B,region decode
+[ ],Memory board,74LS139,DIP-16,1,Board B,subdecode
+[ ],Memory board,74LS273,DIP-20,2,Board B,"MMA low, MMA high"
+[ ],Memory board,74LS245,DIP-20,1,Board B,"MMD path / data isolation"
+[ ],Memory board,74LS00,DIP-14,1,Board B,decode glue
+[ ],Memory board,74LS32N,DIP-14,1,Board B,"planned decode / glue flexibility; datasheet in repo"
+[ ],I/O board,74LS244,DIP-20,1,Board C,input buffer
+[ ],I/O board,74LS273,DIP-20,1,Board C,output latch
+[ ],I/O board,74LS164,DIP-14,1,Board C,pseudo-random source
+[ ],I/O board,74LS86,DIP-14,1,Board C,XOR feedback
+[ ],I/O board,8-position DIP switch,"DIP switch, 8-pos",2,Board C,"ENVL, ENVH; selected part CTS 195-8MST, through-hole, piano/top-actuated"
+[ ],I/O board,5mm LEDs,T-1 3/4,16,Board C,"ACTL plus debug / ACTH"
+[ ],I/O board,330R LED resistor,axial resistor,16,Board C,one per LED
+[ ],I/O board,momentary switches,"panel / PCB switch",2,Board C,"mode / test"
+[ ],I/O board,10k resistor network or discrete pull-ups,"SIP network or axial",2,Board C,switch pulls
+[ ],Sockets,DIP-40 wire-wrap socket,DIP-40 WW socket,1,Board A,8085A
+[ ],Sockets,DIP-28 wire-wrap socket,DIP-28 WW socket,3,Board B,"62256, 6264, EEPROM"
+[ ],Sockets,DIP-20 wire-wrap socket,DIP-20 WW socket,6,"A, B, C","1 + 3 + 2"
+[ ],Sockets,DIP-16 wire-wrap socket,DIP-16 WW socket,3,"A, B","1 + 2"
+[ ],Sockets,DIP-14 wire-wrap socket,DIP-14 WW socket,5,"A, B, C","2 + 2 + 1"
+[ ],Sockets,DIP-28 ZIF socket,DIP-28 ZIF,3 required,Board B,"plugs into soldered DIP-28 machine-pin WW sockets at U1, U7, and U8; 1 spare recommended"
+[ ],Passive,0.1uF ceramic decoupling capacitor,"radial / ceramic",17,all boards,one per IC minimum
+[ ],Passive,bulk electrolytic 47uF to 470uF,radial electrolytic,3,"A, B, C",one per board
+[ ],Passive,extra 10k resistors,axial resistor,8,general,"pull-ups, glue, spare"
+[ ],Passive,extra 1k resistors,axial resistor,4,general,"optional indicators / glue"
+[ ],Wiring,30 AWG Kynar wire-wrap wire,spool,3 to 5 spools,all boards,multiple colors preferred
+[ ],Wiring,22-24 AWG hookup wire red,spool,1 spool,power,+5V
+[ ],Wiring,22-24 AWG hookup wire black,spool,1 spool,power,GND
+[ ],Wiring,16- to 26-conductor ribbon or grouped cable,cable,2 lengths,"CAB-A-B, CAB-A-C","one connectorized cable and one fixed harness"
+[ ],Wiring,cable lacing zip ties or harness clamps,consumable,1 pack,stack harness,recommended for the hard-wired board
+[ ],Mechanical,standoffs / board supports,hardware set,1 set,rack,enough for 3 boards
+[ ],Mechanical,labels or masking tape flags,consumable,1 pack,build aid,"cable and signal marking"
+[ ],Power,+5V USB battery supply,USB power bank,1,bring-up,selected bench source for first logic bring-up
+[ ],Power,HP 5004A signature-analyzer clip leads,"grabber / clip lead",2,bring-up,used to clip +5V and GND onto board input pins
+[ ],Tools,Batronix BX32P Barlino II programmer,"USB EPROM / EEPROM programmer",1 optional,ROM programming,"recommended for planned 28C EEPROMs and likely compatible with older ST MC27C128 EPROM parts"
+[ ],Tools,wire-wrap tool,hand tool,1,build,manual or powered
+[ ],Tools,unwrap tool,hand tool,1,build,strongly recommended
+[ ],Tools,Weller soldering iron,bench tool,1,build,"connectors, headers"
+[ ],Tools,logic probe,bench tool,1,debug,recommended
+[ ],Tools,oscilloscope,bench instrument,1,debug,recommended
