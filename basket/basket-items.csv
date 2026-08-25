@@ -1,6 +1,6 @@
 "SHOPPING BASKET"
 "This is not an invoice"
-"24-Aug-26 11:41:28"
+"25-Aug-26 02:00:42"
 ,"Mouser No","Mfr. No","Manufacturer","Customer No","Description ","RoHS","Lifecycle","Order Qty.","Price (EUR)","Ext.: (EUR)",,
 "1","517-3365/40FT","3365/40-CUT-LENGTH","3M","","Flat Cables .050 40 COND. 28AWG ROUND 1PC=1FT","RoHS Compliant",,"6","0,774 €","4,64 €"
 "2","517-228-1290-00","228-1290-00-0602J","3M","","IC & Component Sockets 0.070"" DIP SOCKET 28 Contact Qty.","RoHS Compliant",,"4","25,97 €","103,88 €"
@@ -22,39 +22,40 @@
 "18","595-SN74LS138N","SN74LS138N","Texas Instruments","","Encoders, Decoders, Multiplexers & Demultiplexers Line Decoder","RoHS Compliant",,"10","0,577 €","5,77 €"
 "19","595-SN74LS139AN","SN74LS139AN","Texas Instruments","","Encoders, Decoders, Multiplexers & Demultiplexers Dual","RoHS Compliant",,"10","0,612 €","6,12 €"
 "20","575-1234762841001000","123-47-628-41-001000","Mill-Max","","IC & Component Sockets STANDARD WIRE WRAP DIP SOCKET","RoHS Compliant",,"10","5,94 €","59,40 €"
-"21","358-SC0546","SC0546","Raspberry Pi","","HDMI Cables Micro HDMI to HDMI Cable 1m Black","RoHS Compliant",,"2","4,30 €","8,60 €"
-"22","571-5749180-1","5749180-1","TE Connectivity","","Circular DIN Connectors 6P R/A W/ HOLDDOWN","RoHS Compliant",,"4","2,24 €","8,96 €"
-"23","595-LM339AN","LM339AN","Texas Instruments","","Analog Comparators Quad Diff","RoHS Compliant",,"20","0,367 €","7,34 €"
-"24","652-MF-R050-AP","MF-R050-AP","Bourns","","Resettable Fuses - PPTC PTC RESETTABLE 0.5A 60V RADIAL LEADED","RoHS Compliant",,"20","0,353 €","7,06 €"
-"25","652-MF-R110-AP","MF-R110-AP","Bourns","","Resettable Fuses - PPTC PTC RESETTABLE 1.1A 30V RADIAL LEADED","RoHS Compliant",,"10","0,406 €","4,06 €"
-"26","652-MF-R075-AP","MF-R075-AP","Bourns","","Resettable Fuses - PPTC PTC RESETTABLE 0.75A 60V RADIAL LEADED","RoHS Compliant",,"20","0,353 €","7,06 €"
-"27","80-C315C220J3G5TA","C315C220J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 22pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,193 €","1,93 €"
-"28","774-ATS16B-E","ATS16B-E","CTS","","Crystals 16MHz 18pF 30ppm -40C 85C","RoHS Compliant",,"5","0,568 €","2,84 €"
-"29","637-1N5819","1N5819","Diotec Semiconductor","","Schottky Diodes & Rectifiers Schottky, DO-15, 40V, 1A","RoHS Compliant By Exemption",,"100","0,094 €","9,40 €"
-"30","512-1N4148","1N4148","onsemi","","Small Signal Switching Diodes 100V Io/200mA BULK","RoHS Compliant By Exemption",,"100","0,032 €","3,20 €"
-"31","581-SR215C104KARAP1","SR215C104KARAP1","KYOCERA AVX","","Multilayer Ceramic Capacitors MLCC - Leaded 50V 0.1uF X7R 10%RHS Long Leads 10%","RoHS Compliant",,"100","0,206 €","20,60 €"
-"32","667-ECE-A1EKS100","ECE-A1EKS100","Panasonic","","Aluminium Electrolytic Capacitors - Radial Leaded 10UF 25V KS RADIAL","RoHS Compliant",,"100","0,089 €","8,90 €"
-"33","667-ECA-1HM470","ECA-1HM470","Panasonic","","Aluminium Electrolytic Capacitors - Radial Leaded 47uF 50V","RoHS Compliant","New At Mouser","20","0,189 €","3,78 €"
-"34","667-ECQ-E1105JFA","ECQ-E1105JFA","Panasonic","","Film Capacitors 100VDC 1.0uF 5% MPET L/S=5mm",,,"10","0,738 €","7,38 €"
-"35","80-C315C101J3G5TA","C315C101J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 100pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,259 €","2,59 €"
-"36","80-C315C471K3G5TA","C315C471K3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 470pF C0G 10% LS=2.54mm","RoHS Compliant",,"10","0,19 €","1,90 €"
-"37","80-C315C102J3G5TA","C315C102J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 1000pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,193 €","1,93 €"
-"38","80-C320C472J5G5TA","C320C472J5G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 50V 4700pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,342 €","3,42 €"
-"39","80-C315C103J3G5TA","C315C103J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 0.01uF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,288 €","2,88 €"
-"40","652-3386P-1-103LF","3386P-1-103LF","Bourns","","Trimmer Resistors - Through Hole 3/8"" 10Kohms 10% 0.5Watts Square","RoHS Compliant By Exemption",,"10","1,13 €","11,30 €"
-"41","511-USBLC6-2SC6","USBLC6-2SC6","STMicroelectronics","","ESD Protection Diodes / TVS Diodes ESD Protection Low Cap","RoHS Compliant",,"10","0,206 €","2,06 €"
-"42","855-M20-9994045","M20-9994045","Harwin","","Headers & Wire Housings M20 40 SIL HORIZONTAL PIN HEADER TIN","RoHS Compliant",,"10","1,44 €","14,40 €"
-"43","556-ATMEGA328P-PU","ATMEGA328P-PU","Microchip","","8-bit Microcontrollers - MCU 32KB In-system Flash 20MHz 1.8V-5.5V","RoHS Compliant","NRND","10","2,49 €","24,90 €"
-"44","763-0116GZ-FSW-GBW","NHD-0116GZ-FSW-GBW","Newhaven Display","","LCD Character Display Modules & Accessories STN- GRAY Transfl 151.0 x 40.0","RoHS Compliant",,"3","15,98 €","47,94 €"
-"45","758-204GBCBW","204G BC BW","Displaytech","","LCD Character Display Modules & Accessories 20x4 Char Display STN Y/G 6 oclock","RoHS Compliant",,"2","25,60 €","51,20 €"
-"46","179-PB5-M-R-R-67","PB5-M-R-R-67","Same Sky","","Pushbutton Switches - Industrial Push Button, SPST-NO, Off-(On) 12mm, Raised, Red, Panel Mount, IP67","RoHS Compliant","New Product","1","2,49 €","2,49 €"
-"47","179-PB5-M-BK-R-67","PB5-M-BK-R-67","Same Sky","","Pushbutton Switches - Industrial Push Button, SPST-NO, Off-(On) 12mm, Raised, Black, Panel Mount, IP67","RoHS Compliant","New Product","2","2,49 €","4,98 €"
-"48","179-PB4L-M-RR-D-67","PB4L-M-RR-D-67","Same Sky","","Pushbutton Switches - Industrial Push Button, SPST-NO, Off-(On) 12mm, Red Dome, Red Illuminated, Panel Mount, IP67","RoHS Compliant","New Product","1","2,12 €","2,12 €"
-"49","179-PTNS2-4515M-B10","PTNS2-4515M-B10","Same Sky","","Slide Potentiometers Slide pot, 45mm travel, 10K ohm, 15mm metal lever, linear","RoHS Compliant","New Product","10","1,38 €","13,80 €"
-"50","595-CD74HC4051E","CD74HC4051E","Texas Instruments","","Multiplexer Switch ICs High Spd CMOS Analog","RoHS Compliant",,"10","0,641 €","6,41 €"
+"21","571-5749180-1","5749180-1","TE Connectivity","","Circular DIN Connectors 6P R/A W/ HOLDDOWN","RoHS Compliant",,"4","2,24 €","8,96 €"
+"22","595-LM339AN","LM339AN","Texas Instruments","","Analog Comparators Quad Diff","RoHS Compliant",,"20","0,367 €","7,34 €"
+"23","652-MF-R050-AP","MF-R050-AP","Bourns","","Resettable Fuses - PPTC PTC RESETTABLE 0.5A 60V RADIAL LEADED","RoHS Compliant",,"20","0,353 €","7,06 €"
+"24","652-MF-R110-AP","MF-R110-AP","Bourns","","Resettable Fuses - PPTC PTC RESETTABLE 1.1A 30V RADIAL LEADED","RoHS Compliant",,"10","0,406 €","4,06 €"
+"25","652-MF-R075-AP","MF-R075-AP","Bourns","","Resettable Fuses - PPTC PTC RESETTABLE 0.75A 60V RADIAL LEADED","RoHS Compliant",,"20","0,353 €","7,06 €"
+"26","80-C315C220J3G5TA","C315C220J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 22pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,193 €","1,93 €"
+"27","774-ATS16B-E","ATS16B-E","CTS","","Crystals 16MHz 18pF 30ppm -40C 85C","RoHS Compliant",,"5","0,568 €","2,84 €"
+"28","637-1N5819","1N5819","Diotec Semiconductor","","Schottky Diodes & Rectifiers Schottky, DO-15, 40V, 1A","RoHS Compliant By Exemption",,"100","0,094 €","9,40 €"
+"29","512-1N4148","1N4148","onsemi","","Small Signal Switching Diodes 100V Io/200mA BULK","RoHS Compliant By Exemption",,"100","0,032 €","3,20 €"
+"30","581-SR215C104KARAP1","SR215C104KARAP1","KYOCERA AVX","","Multilayer Ceramic Capacitors MLCC - Leaded 50V 0.1uF X7R 10%RHS Long Leads 10%","RoHS Compliant",,"100","0,206 €","20,60 €"
+"31","667-ECE-A1EKS100","ECE-A1EKS100","Panasonic","","Aluminium Electrolytic Capacitors - Radial Leaded 10UF 25V KS RADIAL","RoHS Compliant",,"100","0,089 €","8,90 €"
+"32","667-ECA-1HM470","ECA-1HM470","Panasonic","","Aluminium Electrolytic Capacitors - Radial Leaded 47uF 50V","RoHS Compliant","New At Mouser","20","0,189 €","3,78 €"
+"33","667-ECQ-E1105JFA","ECQ-E1105JFA","Panasonic","","Film Capacitors 100VDC 1.0uF 5% MPET L/S=5mm",,,"10","0,738 €","7,38 €"
+"34","80-C315C101J3G5TA","C315C101J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 100pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,259 €","2,59 €"
+"35","80-C315C471K3G5TA","C315C471K3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 470pF C0G 10% LS=2.54mm","RoHS Compliant",,"10","0,19 €","1,90 €"
+"36","80-C315C102J3G5TA","C315C102J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 1000pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,193 €","1,93 €"
+"37","80-C320C472J5G5TA","C320C472J5G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 50V 4700pF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,342 €","3,42 €"
+"38","80-C315C103J3G5TA","C315C103J3G5TA","KEMET","","Multilayer Ceramic Capacitors MLCC - Leaded 25V 0.01uF C0G 5% LS=2.54mm","RoHS Compliant",,"10","0,288 €","2,88 €"
+"39","652-3386P-1-103LF","3386P-1-103LF","Bourns","","Trimmer Resistors - Through Hole 3/8"" 10Kohms 10% 0.5Watts Square","RoHS Compliant By Exemption",,"10","1,13 €","11,30 €"
+"40","511-USBLC6-2SC6","USBLC6-2SC6","STMicroelectronics","","ESD Protection Diodes / TVS Diodes ESD Protection Low Cap","RoHS Compliant",,"10","0,206 €","2,06 €"
+"41","855-M20-9994045","M20-9994045","Harwin","","Headers & Wire Housings M20 40 SIL HORIZONTAL PIN HEADER TIN","RoHS Compliant",,"10","1,44 €","14,40 €"
+"42","556-ATMEGA328P-PU","ATMEGA328P-PU","Microchip","","8-bit Microcontrollers - MCU 32KB In-system Flash 20MHz 1.8V-5.5V","RoHS Compliant","NRND","10","2,49 €","24,90 €"
+"43","763-0116GZ-FSW-GBW","NHD-0116GZ-FSW-GBW","Newhaven Display","","LCD Character Display Modules & Accessories STN- GRAY Transfl 151.0 x 40.0","RoHS Compliant",,"3","15,98 €","47,94 €"
+"44","758-204GBCBW","204G BC BW","Displaytech","","LCD Character Display Modules & Accessories 20x4 Char Display STN Y/G 6 oclock","RoHS Compliant",,"2","25,60 €","51,20 €"
+"45","179-PB5-M-R-R-67","PB5-M-R-R-67","Same Sky","","Pushbutton Switches - Industrial Push Button, SPST-NO, Off-(On) 12mm, Raised, Red, Panel Mount, IP67","RoHS Compliant","New Product","1","2,49 €","2,49 €"
+"46","179-PB5-M-BK-R-67","PB5-M-BK-R-67","Same Sky","","Pushbutton Switches - Industrial Push Button, SPST-NO, Off-(On) 12mm, Raised, Black, Panel Mount, IP67","RoHS Compliant","New Product","2","2,49 €","4,98 €"
+"47","179-PB4L-M-RR-D-67","PB4L-M-RR-D-67","Same Sky","","Pushbutton Switches - Industrial Push Button, SPST-NO, Off-(On) 12mm, Red Dome, Red Illuminated, Panel Mount, IP67","RoHS Compliant","New Product","1","2,12 €","2,12 €"
+"48","179-PTNS2-4515M-B10","PTNS2-4515M-B10","Same Sky","","Slide Potentiometers Slide pot, 45mm travel, 10K ohm, 15mm metal lever, linear","RoHS Compliant","New Product","10","1,38 €","13,80 €"
+"49","595-CD74HC4051E","CD74HC4051E","Texas Instruments","","Multiplexer Switch ICs High Spd CMOS Analog","RoHS Compliant",,"10","0,641 €","6,41 €"
+"50","179-PTNS2-4515M-B01","PTNS2-4515M-B01","Same Sky","","Slide Potentiometers Slide pot, 45mm travel, 1K ohm, 15mm metal lever, linear","RoHS Compliant","New Product","10","1,38 €","13,80 €"
+"51","855-D0820-42","D0820-42","Harwin","","IC & Component Sockets D08 20 WAY 3 LEVEL SIL WIRE WRAP IC SKT","RoHS Compliant By Exemption",,"20","2,40 €","48,00 €"
 ,,,,,,,,,
 "By submitting your order you agree
-to these terms and conditions.",,,,,,,,,"Merchandise:","731,47 €"
+to these terms and conditions.",,,,,,,,,"Merchandise:","784,67 €"
 "Prices are reflected at the date and time shown.",,,,,,,,,"Delivery Charge:","0,00 €"
 ,,,,,,,,,,
 ,,,,,,,,,,
@@ -62,6 +63,105 @@ to these terms and conditions.",,,,,,,,,"Merchandise:","731,47 €"
 ,,,,,,,,,,
 ,,,,,,,,,,
 ,,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
 ,,,,,,,,,
