@@ -1,6 +1,6 @@
 # Rodney `6x09` 3-Board Single-Sheet BOM
 
-Single-sheet build of materials for the current `3 x Vector 8801-6` bench-first Rodney redesign targeting `6809` first and `6309` compatibility second.
+Single-sheet build of materials for the current `3 x Vector 8801-6` bench-first Rodney redesign targeting `MC6809P` first and `HD63C09RP` compatibility second.
 
 This BOM is specific to the `build/6x09` redesign track and does **not** replace the canonical `8085` BOM.
 
@@ -14,8 +14,8 @@ Companion docs:
 ## Assumptions
 
 - This is the `6x09` behavioral-architecture build, not a historically strict Heiserman `8085` reconstruction.
-- First-pass CPU target is `6809`.
-- Board and software layout should remain compatible with a later `6309` drop-in test.
+- First-pass CPU target is `MC6809P`.
+- Board and software layout should remain compatible with a later `HD63C09RP` drop-in test.
 - The logical `ENVL` / `ACTL` / `MMA` / `MMD` model is preserved.
 - All I/O remains memory-mapped.
 - ROM must occupy high memory so the CPU can fetch vectors at `FFF0-FFFF`.
@@ -30,8 +30,8 @@ Companion docs:
 | `[ ]` | Core | `0.1"` male header strips | `0.1" header` | 4 | all boards | bus, service, debug |
 | `[ ]` | Core | test posts / turret posts | `turret / post` | 18 | all boards | `6 + 8 + 4` top-edge minimum |
 | `[ ]` | Core | hard-wire interboard harness anchor points | `lug / header / clamp` | 1 set | `Board C` | header, solder lugs, or strain-relieved tie points |
-| `[ ]` | CPU board | `6809` CPU | `DIP-40` | 1 | `Board A` | first-pass target CPU |
-| `[ ]` | CPU board | `6309` compatibility | note | 1 note | `Board A` | layout and software should allow later drop-in validation |
+| `[ ]` | CPU board | `MC6809P` CPU | `DIP-40` | 1 | `Board A` | first-pass target CPU |
+| `[ ]` | CPU board | `HD63C09RP` compatibility | note | 1 note | `Board A` | layout and software should allow later drop-in validation |
 | `[ ]` | CPU board | `74LS245` | `DIP-20` | 1 | `Board A` | provisional data-bus buffering / inter-board isolation |
 | `[ ]` | CPU board | `74LS138` | `DIP-16` | 1 | `Board A` | provisional coarse decode or chip-select assist |
 | `[ ]` | CPU board | `74LS04` | `DIP-14` | 1 | `Board A` | provisional clock/reset glue |
@@ -59,7 +59,7 @@ Companion docs:
 | `[ ]` | I/O board | LED resistors `330R` | `axial resistor` | 16 | `Board C` | one per LED |
 | `[ ]` | I/O board | momentary switches | `panel / PCB switch` | 2 | `Board C` | mode / test |
 | `[ ]` | I/O board | `10k` resistor network or discrete pull-ups | `SIP network or axial` | 2 | `Board C` | switch pulls |
-| `[ ]` | Sockets | `DIP-40` wire-wrap socket | `DIP-40 WW socket` | 1 | `Board A` | `6809` / `6309` CPU socket |
+| `[ ]` | Sockets | `DIP-40` wire-wrap socket | `DIP-40 WW socket` | 1 | `Board A` | `MC6809P` / `HD63C09RP` CPU socket |
 | `[ ]` | Sockets | `DIP-28` wire-wrap socket | `DIP-28 WW socket` | 3 | `Board B` | `62256`, `6264`, EEPROM |
 | `[ ]` | Sockets | `DIP-20` wire-wrap socket | `DIP-20 WW socket` | 5 | `A, B, C` | `1 + 3 + 1` |
 | `[ ]` | Sockets | `DIP-16` wire-wrap socket | `DIP-16 WW socket` | 2 | `A, B` | `1 + 1` |
@@ -111,7 +111,7 @@ Counting note:
 ## Board A Notes
 
 - `74LS373` is intentionally omitted from this BOM.
-- CPU choice for bring-up should be `6809`; validate `6309` after the baseline board is stable.
+- CPU choice for bring-up should be `MC6809P`; validate `HD63C09RP` after the baseline board is stable.
 - The clock source entry is intentionally generic because the final `E/Q` generation method has not yet been frozen.
 - If the final `Board A` schematic proves that `74LS245` or `74LS138` is unnecessary, remove them in the next revision of this `6x09` BOM only.
 
@@ -126,7 +126,7 @@ Counting note:
 
 This BOM aligns well with the current on-hand stock snapshot:
 
-- CPUs are already on hand for both `6809` and `6309`
+- CPUs are already on hand for both `MC6809P` and `HD63C09RP`
 - memory devices are already well covered
 - the required TTL family is mostly already present
 - the main unresolved item is the exact `Board A` clock implementation, not overall parts availability

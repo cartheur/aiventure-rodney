@@ -18,6 +18,7 @@ Companion references:
 - [6X09-BOM-DELTA.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/6X09-BOM-DELTA.md:1)
 - [6X09-MISSING-PARTS-CHECKLIST.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/6X09-MISSING-PARTS-CHECKLIST.md:1)
 - [AN002-GA144-CRYSTAL-BOUNDARY.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-GA144-CRYSTAL-BOUNDARY.md:1)
+- [AN002-171106-OSC.pdf](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-171106-OSC.pdf)
 
 ## Build Intent
 
@@ -53,7 +54,7 @@ More exact interpretation:
 - this BOM ends at the conventional crystal-clocked CPU boundary
 - the `GA144` path begins at the resonant frequency of that crystal
 
-So the crystal is the handoff point between:
+So the crystal is the borderline between:
 
 - conventional socketed CPU timing and support logic
 - the next `GA144` architectural regime
@@ -61,7 +62,7 @@ So the crystal is the handoff point between:
 Branch note:
 
 - just before establishing that boundary, the `Board A-6x09` concept was about to use a `74LS74` as part of a more conventional clock-divider / phase-generation scheme
-- that approach remains documented here as the near-term conventional option, but it is now explicitly de-emphasized relative to the crystal-boundary interpretation
+- that approach remains documented here as the near-term conventional option, but it is now explicitly de-emphasized relative to the `GA144` crystal-boundary interpretation described by `AN002`
 - see `AN002`
 
 ## Board Set
@@ -122,15 +123,20 @@ The real focus here is the electronics population.
 
 First-pass target CPU:
 
-- `1 x MC6809P` or `1 x EF6809P`
+- `1 x MC6809P`
 
 Later validation CPU:
 
 - `1 x HD63C09RP` drop-in test on the same board
 
+From `Rev. 1` onward:
+
+- `GA144` inclusion is assumed on `Board A` at the crystal boundary
+- see [AN002-171106-OSC.pdf](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-171106-OSC.pdf)
+
 ### ICs
 
-- `1 x 6809` CPU
+- `1 x MC6809P`
 - `1 x SN74LS245N`
 - `1 x SN74LS138N`
 - `1 x SN74LS04N`
@@ -162,17 +168,18 @@ Later validation CPU:
 Clock note:
 
 - the `SN74LS74N` remains listed only because the conventional `6x09` branch was about to use it for a less elegant divider / phase-generation path
-- if the crystal boundary is now treated as the start of the `GA144` phase, this part should be considered provisional rather than foundational
+- the cleaner direction is to let `GA144` handle crystal excitation and resonance-finding behavior as described by `AN002`
+- if that direction holds, `SN74LS74N` should be considered provisional rather than foundational
 
 ### `6309` Hardware Note
 
-No mandatory extra support hardware is required just to run a `6309` in a `6809`-compatible first pass.
+No mandatory extra support hardware is required just to run an `HD63C09RP` in an `MC6809P`-compatible first pass.
 
 Recommended stance:
 
-- design `Board A-6x09` for `6809` bring-up
-- validate `6309` as a drop-in second step
-- only revisit timing if you later push clock speed or use `6309`-specific software aggressively
+- design `Board A-6x09` for `MC6809P` bring-up
+- validate `HD63C09RP` as a drop-in second step
+- only revisit timing if you later push clock speed or use `HD63C09RP`-specific software aggressively
 
 ## `Board B`
 
@@ -233,8 +240,8 @@ Recommended stance:
 ### CPUs
 
 - `1 x 8085A`
-- `1 x 6809`
-- `1 x 6309` reserved for validation, not simultaneous installation
+- `1 x MC6809P`
+- `1 x HD63C09RP` reserved for validation, not simultaneous installation
 
 ### Memory
 
@@ -304,11 +311,11 @@ Most likely weak or untracked areas:
 - canned oscillator module choice
 - operator switches, test posts, and small bench accessories
 
-## `6309` Versus `6809`
+## `HD63C09RP` Versus `MC6809P`
 
 ### No additional mandatory hardware for first-pass compatibility
 
-If you use the `6309` as a drop-in test CPU on the same conservative board:
+If you use the `HD63C09RP` as a drop-in test CPU on the same conservative board:
 
 - no extra memory hardware
 - no extra decode hardware
@@ -320,13 +327,13 @@ Potential later support work:
 
 - revalidate ROM and bus timing at higher clock rates
 - possibly revisit wait-state strategy if you drive the board faster
-- consider software changes only if you want native `6309` instructions or modes
+- consider software changes only if you want native `HD63C09RP` instructions or modes
 
 ### Practical recommendation
 
-- build and debug `Board A-6x09` with a `6809`
+- build and debug `Board A-6x09` with `MC6809P`
 - confirm ROM fetch, RAM handoff, `MMA/MMD`, and Beta seed behavior
-- only then test the `6309`
+- only then test the `HD63C09RP`
 
 ## Suggested Next Artifact
 

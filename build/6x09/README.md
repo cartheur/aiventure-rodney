@@ -1,5 +1,16 @@
 # Rodney `6x09` Redesign Track
 
+Short revision flow:
+
+- `Rev. 0`: `i8085` on `Board A`
+- `Rev. 1`: `MC6809P` + `GA144` on `Board A`
+- `Rev. 2`: `HD63C09RP` + `GA144` on `Board A`
+- `Rev. 3`: `MC6809P/HD63C09RP/SC67475P` + `GA144` on `Board A`
+
+From `Rev. 1` onward, the crystal is treated as the borderline where conventional CPU timing meets `GA144`-driven resonant excitation and control.
+
+Per `AN002`, the idea is to connect the resonant device to a single `GA144` GPIO pin and ground, excite it under program control, observe it via asynchronous pin wake-up, and then sustain oscillation by synchronously pumping energy back into the crystal with minimal external circuitry.
+
 This folder captures what it would take to pivot the current Rodney bench-first architecture away from the `8085A` and onto a `6809` or `6309`.
 
 The key distinction is:
@@ -35,9 +46,13 @@ Why:
 
 The inventory already supports this direction:
 
-- `EF6809P`
 - `MC6809P`
 - `HD63C09RP`
+- `SC67475P`
+
+And for the crystal-boundary side of the revision ladder:
+
+- [AN002-171106-OSC.pdf](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-171106-OSC.pdf) now anchors the `GA144` oscillator / resonant-device approach
 
 ## Scope Of Change
 
@@ -85,6 +100,7 @@ The payoff is real, though:
 - [AN002-GA144-CRYSTAL-BOUNDARY.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-GA144-CRYSTAL-BOUNDARY.md:1)
 - [6X09-BOM-DELTA.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/6X09-BOM-DELTA.md:1)
 - [6X09-MISSING-PARTS-CHECKLIST.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/6X09-MISSING-PARTS-CHECKLIST.md:1)
+- [REV1-PHASE2-MMU-ANALYSIS.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/REV1-PHASE2-MMU-ANALYSIS.md:1)
 - [MEMORY-AND-DECODE-PROPOSAL.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/MEMORY-AND-DECODE-PROPOSAL.md:1)
 - [RODNEY-3BOARD-SINGLE-SHEET-BOM-6X09.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/RODNEY-3BOARD-SINGLE-SHEET-BOM-6X09.md:1)
 - [RODNEY-3BOARD-SINGLE-SHEET-BOM-6X09.csv](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/RODNEY-3BOARD-SINGLE-SHEET-BOM-6X09.csv:1)
@@ -107,10 +123,14 @@ The payoff is real, though:
 
 ## Decision
 
-If only one CPU family should be pursued here, use:
+Use the revision ladder as the organizing path:
 
-- `6809` for first hardware and software bring-up
-- `6309` for later drop-in validation once the baseline system is stable
+- `Rev. 0`: `8085` on `Board A`
+- `Rev. 1`: `MC6809P` plus `GA144` inclusion on `Board A`
+- `Rev. 2`: `HD63C09RP` plus `GA144` inclusion on `Board A`
+- `Rev. 3`: `MC6809P/HD63C09RP/SC67475P` plus `GA144` inclusion on `Board A`
+
+This keeps the branch linear and avoids mixing early board revisions with later expansion terminology.
 
 ## Boundary Marker
 
@@ -126,8 +146,9 @@ In other words:
 
 More specifically, this boundary is defined at the crystal.
 
-- the `6x09` track ends at the conventional crystal-clocked CPU boundary
-- the `GA144` track begins at the resonant-frequency origin of that crystal
+- the conventional CPU side of the design reaches up to the crystal-clocked boundary
+- the `GA144` side begins at the resonant-frequency origin of that crystal
+- from `Rev. 1` onward, the revision ladder includes both sides of that boundary on `Board A`
 
 That means the split is not merely "old CPU here, new chip there." It is:
 
@@ -137,5 +158,6 @@ That means the split is not merely "old CPU here, new chip there." It is:
 Historical note for this branch:
 
 - immediately before drawing this boundary, the `6x09` path was heading toward a `74LS74`-based clock-divider / phase-generation approach
-- that would have been the more conventional and less elegant solution compared with treating the crystal boundary itself as the start of the next phase
+- that would have been the more conventional and less elegant solution compared with using `GA144` at the crystal boundary
+- `AN002-171106-OSC.pdf` is the direct reference for the more elegant `GA144` oscillator and crystal-excitation path
 - see [AN002-GA144-CRYSTAL-BOUNDARY.md](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-GA144-CRYSTAL-BOUNDARY.md:1)

@@ -19,6 +19,12 @@ It is a change in architectural regime:
 - below the crystal domain: conventional synchronous CPU, glue logic, memory, and bench I/O
 - at and beyond the crystal's resonant-frequency domain: `GA144`
 
+Primary reference:
+
+- [AN002-171106-OSC.pdf](/home/cartheur/ame/aiventure/aiventure-github/cartheur/aiventure-rodney/build/6x09/AN002-171106-OSC.pdf)
+
+The relevant point from that note is that `GA144` can excite and use external resonant devices under program control, including high-frequency and high-`Q` crystal behavior, using minimal external circuitry.
+
 ## Why This Note Exists
 
 Immediately before this boundary was made explicit, the `6x09` branch was moving toward a conventional `74LS74` divider / phase-generation approach for `Board A`.
@@ -27,6 +33,11 @@ That path remains a valid conventional engineering option, but it is intentional
 
 - crystal as boundary
 - `GA144` as the next regime beginning from that resonance domain
+
+More concretely:
+
+- the fallback idea was to bang on the `6x09` crystal with a `74LS74`-based conventional clocking scheme until resonance behavior was found and stabilized
+- `AN002` shows a more elegant `GA144` approach in which the resonant device can be excited and observed under program control rather than forced through a conventional flip-flop-centered solution
 
 ## Scope
 
